@@ -1,0 +1,7 @@
+# Bootstrap 3
+group :development, :test do
+  gem 'rails_layout'  # Bootstrap 3 layout generator
+end
+
+gem 'bootstrap-sass'
+
