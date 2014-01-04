@@ -276,19 +276,24 @@ fi
 
 exit 1
 
+# Updates application.rb to turn off FriendlyId deprecated warning
+ # TODO
+ # you can set I18n.enforce_available_locales = false
+
 # Create initial layout
-# TODO
-# if reset css
-# TODO
-# if bootstrap
-# TODO
-# if devise  
+   # TODO
+  # if reset css
+   # TODO
+  # if bootstrap
+   # TODO
+  # if devise  
+   # TODO
     
 # Generate admin zone if authentication
-# if simple
-# TODO
-# if devise
-# TODO     
+  # if simple
+   # TODO
+  # if devise
+   # TODO     
   
 # Migrating DB
 echo
