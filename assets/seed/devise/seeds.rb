@@ -1,14 +1,16 @@
 # Generated with RailsBricks
-# Initial seed file to use with Simple User Model
+# Initial seed file to use with Devise User Model
 
 # Temporary admin account
-u = User.create!(
+u = User.new(
   username: "admin",
   email: "admin@example.com",
   password: "1234",
   password_confirmation: "1234",
   admin: true
 )
+u.skip_confirmation!
+u.save!
 
 # Prompt for test data
 STDOUT.puts
@@ -22,12 +24,14 @@ if result == "y"
   STDOUT.print "How many test users?:"
   users_amount = STDIN.gets.chomp.to_i
   (1..users_amount).each do |i|
-    u = User.create!(
+    u = User.new(
       username: "user#{i}",
       email: "user#{i}@example.com",
       password: "1234",
       password_confirmation: "1234"
     )
+    u.skip_confirmation!
+    u.save!
   end
   
 end

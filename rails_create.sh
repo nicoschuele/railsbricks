@@ -254,8 +254,25 @@ else
   echo "----> No User model to generate."
 fi
 
-# Create a seeds.rb 
-# TODO
+# Create User seed data 
+if [ "$USERMODEL" = "1" ]
+  then
+  echo
+  echo "----> Creating seed data for Simple User Model ..."
+  rm db/seeds.rb
+  cp ~/railsbricks/assets/seed/simple/seeds.rb db/seeds.rb
+  echo "----> seed data for Simple User Model created."
+elif [ "$USERMODEL" = "2" ]
+  then
+  echo
+  echo "----> Creating seed data for Devise User Model ..."
+  rm db/seeds.rb
+  cp ~/railsbricks/assets/seed/devise/seeds.rb db/seeds.rb
+  echo "----> seed data for Devise User Model created."
+else
+  echo
+  echo "----> No seed data necessary."
+fi
 
 exit 1
 
