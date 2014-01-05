@@ -274,12 +274,16 @@ else
   echo "----> No seed data necessary."
 fi
 
+# Updates application.rb
+echo 
+echo "----> Updating application.rb ..."
+rm config/application.rb
+cp ~/railsbricks/assets/application/application.rb config/application.rb
+echo
+echo "----> application.rb set."
+
+
 exit 1
-
-# Updates application.rb to turn off FriendlyId deprecated warning
- # TODO
- # you can set I18n.enforce_available_locales = false
-
 # Create initial layout
    # TODO
   # if reset css
@@ -288,12 +292,17 @@ exit 1
    # TODO
   # if devise  
    # TODO
-    
+
+# Create index page
+  # TODO
+  
 # Generate admin zone if authentication
   # if simple
    # TODO
   # if devise
    # TODO     
+
+# Updates routes
   
 # Migrating DB
 echo
