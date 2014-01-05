@@ -313,6 +313,7 @@ if [ "$USERMODEL" = "3" ] && [ "$LAYOUT" = "1" ]
   
   echo
   echo "---> Updating application_helper.rb ..."
+  rm app/helpers/application_helper.rb
   ~/railsbricks/assets/bricks/common/helpers/set_application_helper.rb $APPNAME
   echo
   echo "---> application_helper set."
@@ -335,12 +336,80 @@ if [ "$USERMODEL" = "3" ] && [ "$LAYOUT" = "1" ]
   echo "---> Updating routes.rb"
   rm config/routes.rb
   ~/railsbricks/assets/bricks/common/routes/none/set_routes.rb $APPNAME
+  echo
+  echo "---> routes.rb updated."
   
   echo
   echo "----> BRICKS: selected brick generated."
 fi
 
-# TODO No auth, bootstrap : none-bootstrap
+# No auth, bootstrap : none-bootstrap
+if [ "$USERMODEL" = "3" ] && [ "$LAYOUT" = "2" ]
+  then
+  echo
+  echo "----> BRICKS: No authentication, Bootstrap 3 <----"
+  
+  echo
+  echo "---> Overriding default CSS ..."
+  rm app/assets/stylesheets/application.css.scss
+  cp ~/railsbricks/assets/bricks/common/css/bootstrap/application.css.scss app/assets/stylesheets/application.css.scss
+  rm app/assets/stylesheets/framework_and_overrides.css.scss
+  cp ~/railsbricks/assets/bricks/none-bootstrap/css/framework_and_overrides.css.scss app/assets/stylesheets/framework_and_overrides.css.scss
+  echo
+  echo "---> Default CSS set."
+  
+  echo
+  echo "---> Creating Pages controller ..."
+  cp ~/railsbricks/assets/bricks/common/controllers/pages_controller.rb app/controllers/pages_controller.rb
+  echo
+  echo "---> Pages controller created."
+  
+  echo
+  echo "---> Updating application_helper.rb ..."
+  rm app/helpers/application_helper.rb
+  ~/railsbricks/assets/bricks/common/helpers/set_application_helper.rb $APPNAME
+  echo
+  echo "---> application_helper set."
+  
+  echo
+  echo "---> Updating routes.rb"
+  rm config/routes.rb
+  ~/railsbricks/assets/bricks/common/routes/none/set_routes.rb $APPNAME
+  echo
+  echo "---> routes.rb updated."
+  
+  echo
+  echo "---> Creating Home view ..."
+  mkdir app/views/pages
+  cp ~/railsbricks/assets/bricks/none-bootstrap/views/home.html.erb app/views/pages/home.html.erb
+  echo
+  echo "---> Home view created."
+  
+  echo
+  echo "---> Updating application.html.erb"
+  rm app/views/layouts/application.html.erb
+  ~/railsbricks/assets/bricks/common/layouts/bootstrap/set_application.rb $APPNAME
+  echo
+  echo "---> application.html.erb set."
+  
+  echo
+  echo "---> Creating a footer ..."
+  cp ~/railsbricks/assets/bricks/common/layouts/bootstrap/_footer.html.erb app/views/layouts/_footer.html.erb
+  echo
+  echo "---> Footer created."
+  
+  echo
+  echo "---> Updating navigation ..."
+  rm app/views/layouts/_navigation_links.html.erb
+  rm app/views/layouts/_navigation.html.erb
+  cp ~/railsbricks/assets/bricks/none-bootstrap/views/_navigation_links.html.erb app/views/layouts/_navigation_links.html.erb
+  cp ~/railsbricks/assets/bricks/none-bootstrap/views/_navigation.html.erb app/views/layouts/_navigation.html.erb
+  echo
+  echo "---> Navigation updated."
+  
+  echo
+  echo "----> BRICKS: selected brick generated."
+fi
 
 # TODO auth simple, reset CSS : simple-reset
 
