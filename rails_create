@@ -14,6 +14,8 @@ echo "Create a new Rails 4.0.2 app?(y/n):"
 read CONTNEW
 if [ "$CONTNEW" = "n" ]
   then
+  echo
+  echo "----> RailsBricks exited."
   exit 1
 fi
 
@@ -278,31 +280,23 @@ fi
 echo 
 echo "----> Updating application.rb ..."
 rm config/application.rb
-cp ~/railsbricks/assets/application/application.rb config/application.rb
+~/railsbricks/assets/application/set_application.rb $APPNAME
 echo
 echo "----> application.rb set."
 
+# TODO Create initial layout
+  # TODO if reset css
+  # TODO if bootstrap
+    # TODO if devise  
+    # TODO if simple
 
-exit 1
-# Create initial layout
-   # TODO
-  # if reset css
-   # TODO
-  # if bootstrap
-   # TODO
-  # if devise  
-   # TODO
-
-# Create index page
-  # TODO
+# TODO Create index page
   
-# Generate admin zone if authentication
-  # if simple
-   # TODO
-  # if devise
-   # TODO     
+# TODO Generate admin zone if authentication
+  # TODO if simple
+  # TODO if devise
 
-# Updates routes
+# TODO Updates routes
   
 # Migrating DB
 echo
@@ -311,6 +305,8 @@ rake db:migrate
 rake db:seed
 echo
 echo "----> Database initialized."
+
+exit 1
 
 # Git
 if [ "$GITSET" = "y" ]
@@ -352,39 +348,3 @@ echo "************************************************"
 echo
 echo "Have a great coding time!"
 echo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
