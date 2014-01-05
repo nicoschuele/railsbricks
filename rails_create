@@ -252,6 +252,7 @@ elif [ "$USERMODEL" = "2" ]
   echo
   echo "----> Devise User model set."
 else
+  echo
   echo "----> No User model to generate."
 fi
 
@@ -283,19 +284,75 @@ rm config/application.rb
 echo
 echo "----> application.rb set."
 
-# TODO Create initial layout
-  # TODO if reset css
-  # TODO if bootstrap
-    # TODO if devise  
-    # TODO if simple
+# Set favicon
+echo
+echo "----> Setting favicon ..."
+cp ~/railsbricks/assets/bricks/common/images/favicon.ico app/assets/images/favicon.ico
 
-# TODO Create index page
+# *************************************************************
+# BRICKS
+
+# No auth, reset CSS : none-reset
+if [ "$USERMODEL" = "3" ] && [ "$LAYOUT" = "1" ]
+  then
+  echo
+  echo "----> BRICKS: No authentication, reset CSS <----"
+
+  echo
+  echo "---> Overriding default CSS ..."
+  rm app/assets/stylesheets/application.css
+  cp ~/railsbricks/assets/bricks/common/css/reset/application.css.scss app/assets/stylesheets/application.css.scss
+  echo
+  echo "---> application.css.scss set."
   
-# TODO Generate admin zone if authentication
-  # TODO if simple
-  # TODO if devise
+  echo
+  echo "---> Creating Pages controller ..."
+  cp ~/railsbricks/assets/bricks/common/controllers/pages_controller.rb app/controllers/pages_controller.rb
+  echo
+  echo "---> Pages controller created."
+  
+  echo
+  echo "---> Updating application_helper.rb ..."
+  ~/railsbricks/assets/bricks/common/helpers/set_application_helper.rb $APPNAME
+  echo
+  echo "---> application_helper set."
+  
+  echo
+  echo "---> Updating application.html.erb"
+  rm app/views/layouts/application.html.erb
+  ~/railsbricks/assets/bricks/common/layouts/reset/set_application.rb $APPNAME
+  echo
+  echo "---> application.html.erb set"
+  
+  echo
+  echo "---> Creating Home view ..."
+  mkdir app/views/pages
+  cp ~/railsbricks/assets/bricks/none-reset/views/home.html.erb app/views/pages/home.html.erb
+  echo
+  echo "---> Home view created."
+  
+  echo
+  echo "---> Updating routes.rb"
+  rm config/routes.rb
+  ~/railsbricks/assets/bricks/common/routes/none/set_routes.rb $APPNAME
+  
+  echo
+  echo "----> BRICKS: selected brick generated."
+fi
 
-# TODO Updates routes
+# TODO No auth, bootstrap : none-bootstrap
+
+# TODO auth simple, reset CSS : simple-reset
+
+# TODO auth simple, bootstrap : simple-bootstrap
+
+# TODO auth devise, reset CSS : devise-reset
+
+# TODO auth devise, bootstrap : devise-bootstrap
+
+
+# END BRICKS
+# *************************************************************
   
 # Migrating DB
 echo
