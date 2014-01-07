@@ -34,8 +34,6 @@ class Admin::UsersController < Admin::BaseController
       @user.locked = new_params[:locked]=="0" ? false : true
     end
     
-    # fail
-    
     if @user.valid?
       @user.skip_reconfirmation!
       @user.save

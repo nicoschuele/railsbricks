@@ -711,8 +711,121 @@ if [ "$USERMODEL" = "2" ] && [ "$LAYOUT" = "1" ]
   echo "----> BRICKS: selected brick generated."
 fi
 
-# TODO auth devise, bootstrap : devise-bootstrap
-
+# auth devise, bootstrap : devise-bootstrap
+if [ "$USERMODEL" = "2" ] && [ "$LAYOUT" = "2" ]
+  then
+  echo
+  echo "----> BRICKS: Devise authentication, Bootstrap 3 <----"
+  
+  echo
+  echo "---> Overriding default CSS ..."
+  rm app/assets/stylesheets/application.css.scss
+  cp ~/railsbricks/assets/bricks/common/css/bootstrap/application.css.scss app/assets/stylesheets/application.css.scss
+  rm app/assets/stylesheets/framework_and_overrides.css.scss
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/css/framework_and_overrides.css.scss app/assets/stylesheets/framework_and_overrides.css.scss
+  echo
+  echo "---> Default CSS set."
+  
+  echo
+  echo "---> Creating Admin controllers ..."
+  mkdir app/controllers/admin
+  cp ~/railsbricks/assets/bricks/common/controllers/devise/admin/base_controller.rb app/controllers/admin/base_controller.rb
+  cp ~/railsbricks/assets/bricks/common/controllers/devise/admin/users_controller.rb app/controllers/admin/users_controller.rb
+  echo
+  echo "---> Admin controllers created."
+  
+  echo
+  echo "---> Creating a Pages controller ..."
+  cp ~/railsbricks/assets/bricks/common/controllers/devise/pages_controller.rb app/controllers/pages_controller.rb
+  echo
+  echo "---> Pages controller created."
+  
+  echo
+  echo "---> Updating application_helper.rb ..."
+  rm app/helpers/application_helper.rb
+  ~/railsbricks/assets/bricks/common/helpers/set_application_helper.rb $APPNAME
+  echo
+  echo "---> application_helper set."
+  
+  echo
+  echo "---> Updating application.html.erb"
+  rm app/views/layouts/application.html.erb
+  ~/railsbricks/assets/bricks/common/layouts/bootstrap/set_application.rb $APPNAME
+  echo
+  echo "---> application.html.erb set."
+  
+  echo
+  echo "---> Creating a footer ..."
+  cp ~/railsbricks/assets/bricks/common/layouts/bootstrap/_footer.html.erb app/views/layouts/_footer.html.erb
+  echo
+  echo "---> Footer created."
+  
+  echo
+  echo "---> Updating navigation ..."
+  rm app/views/layouts/_navigation_links.html.erb
+  rm app/views/layouts/_navigation.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/layouts/_navigation_links.html.erb app/views/layouts/_navigation_links.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/layouts/_navigation.html.erb app/views/layouts/_navigation.html.erb
+  echo
+  echo "---> Navigation updated."
+  
+  echo
+  echo "---> Updating routes.rb"
+  rm config/routes.rb
+  ~/railsbricks/assets/bricks/common/routes/devise/set_routes.rb $APPNAME
+  echo
+  echo "---> routes.rb updated."
+  
+  echo
+  echo "---> Creating Admin views ..."
+  mkdir app/views/admin
+  mkdir app/views/admin/base
+  mkdir app/views/admin/users
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/admin/base/index.html.erb app/views/admin/base/index.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/admin/users/index.html.erb app/views/admin/users/index.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/admin/users/edit.html.erb app/views/admin/users/edit.html.erb
+  echo
+  echo "---> Admin views created."
+  
+  echo
+  echo "---> Creating views ..."
+  mkdir app/views/pages
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/pages/home.html.erb app/views/pages/home.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/pages/inside.html.erb app/views/pages/inside.html.erb
+  echo
+  echo "---> Views created."
+  
+  echo
+  echo "---> Creating Devise views ..."
+  mkdir app/views/devise
+  mkdir app/views/devise/confirmations
+  mkdir app/views/devise/mailer
+  mkdir app/views/devise/passwords
+  mkdir app/views/devise/registrations
+  mkdir app/views/devise/sessions
+  mkdir app/views/devise/shared
+  
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/confirmations/new.html.erb app/views/devise/confirmations/new.html.erb
+  
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/mailer/confirmation_instructions.html.erb app/views/devise/mailer/confirmation_instructions.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/mailer/reset_password_instructions.html.erb app/views/devise/mailer/reset_password_instructions.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/mailer/unlock_instructions.html.erb app/views/devise/mailer/unlock_instructions.html.erb
+  
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/passwords/new.html.erb app/views/devise/passwords/new.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/passwords/edit.html.erb app/views/devise/passwords/edit.html.erb
+  
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/registrations/edit.html.erb app/views/devise/registrations/edit.html.erb
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/registrations/new.html.erb app/views/devise/registrations/new.html.erb
+  
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/sessions/new.html.erb app/views/devise/sessions/new.html.erb
+  
+  cp ~/railsbricks/assets/bricks/devise-bootstrap/views/devise/shared/_links.erb app/views/devise/shared/_links.erb
+  echo
+  echo "---> Devise views created."
+  
+  echo
+  echo "----> BRICKS: selected brick generated."
+fi
 
 # END BRICKS
 # *************************************************************
@@ -724,8 +837,6 @@ rake db:migrate
 rake db:seed
 echo
 echo "----> Database initialized."
-
-exit 1
 
 # Git
 if [ "$GITSET" = "y" ]
@@ -762,7 +873,13 @@ echo
 echo "************************************************"
 echo " RailsBricks generated your app: $APPNAME"
 echo
-# TODO if auth, give username + password
+if [ "$USERMODEL" = "1" ] || [ "$USERMODEL" = "2" ]
+  then
+  echo "The default admin account is:"
+  echo "Username: admin"
+  echo "Password: 1234"
+  echo
+fi
 echo " http://www.railsbricks.net"
 echo "************************************************"
 echo
