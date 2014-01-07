@@ -1,0 +1,116 @@
+@import "bootstrap";
+
+//***********************************************************
+// COLORS
+$highlight-color: #1c94c6;
+$highlight-warning-color: #CC0000;
+$lightest-color: #eeeeee;
+$dark-color: #373737;
+$darker-color: darken($dark-color, 10%);
+
+$font-main-color: $dark-color;
+
+//***********************************************************
+
+//***********************************************************
+// CLASSES FOR TESTING
+.shigh{
+  background-color: yellow;
+}
+.shigh2{
+  background-color: red;
+}
+.shigh3{
+  background-color: blue;
+}
+//***********************************************************
+
+//***********************************************************
+// APPLICATION-WIDE
+html,body{
+  height: 100%;
+  color: $dark-color;
+}
+
+#wrap{
+  min-height: 100%;
+  padding-bottom: 120px;
+}
+//***********************************************************
+
+//***********************************************************
+// FLASH MESSAGES
+.alert{
+  margin-top: 0px;
+}
+//***********************************************************
+
+//***********************************************************
+// NAVBAR
+.navbar{
+  -webkit-border-radius: 0; 
+  -moz-border-radius: 0; 
+  border-radius: 0;
+  margin-bottom: 0px;
+}
+
+.navbar-brand {
+  font-size: inherit;
+}
+
+.navbar-inverse{
+  background-color: $dark-color;
+  border-color: $darker-color;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: $lightest-color;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: $highlight-color;
+}
+//***********************************************************
+
+//***********************************************************
+// ERRORS
+.errors-container{
+  color: $highlight-warning-color;
+  ul{
+    margin-left: 8px;
+    padding-left: 8px;
+  }
+  
+  h2{
+    display:none;
+  }
+}
+
+.error-text{
+  color: $highlight-warning-color;
+}
+
+.field_with_errors{
+  .form-control{
+    border: 1px solid $highlight-warning-color;
+  }
+  label{
+    color: $highlight-warning-color;
+  }
+}
+//***********************************************************
+
+//***********************************************************
+// FOOTER
+#footer{
+  background-color: $dark-color;
+  color: $lightest-color;
+  height: 100px;
+  margin-top: -100px;  
+  letter-spacing: 1px;
+  
+  .footer-first-row{
+    padding-top: 20px;
+  }
+}
+//***********************************************************

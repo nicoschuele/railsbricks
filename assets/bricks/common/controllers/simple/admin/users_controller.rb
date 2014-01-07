@@ -8,7 +8,10 @@ class Admin::UsersController < Admin::BaseController
   end
   
   def update
-    if @user.update(user_params)
+    new_params = user_params.dup
+    new_params[:username] = new_params[:username].strip
+    new_params[:email] = new_params[:email].strip
+    if @user.update(new_params)
       redirect_to admin_root_path, notice: "Your account was successfully updated."
     else
       flash[:alert] = "Account not updated."

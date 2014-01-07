@@ -21,7 +21,7 @@ fi
 
 # App name
 echo 
-echo "What do you want to call your app?:"
+echo "What do you want to call your app?:" 
 read APPNAME
 
 # User model
@@ -423,7 +423,7 @@ fi
 if [ "$USERMODEL" = "1" ] && [ "$LAYOUT" = "1" ]
   then
   echo
-  echo "----> BRICKS: Simple authentication, Bootstrap 3 <----"
+  echo "----> BRICKS: Simple authentication, reset CSS <----"
   
   echo
   echo "---> Overriding default CSS ..."
@@ -507,7 +507,104 @@ if [ "$USERMODEL" = "1" ] && [ "$LAYOUT" = "1" ]
   echo "----> BRICKS: selected brick generated."
 fi
 
-# TODO auth simple, bootstrap : simple-bootstrap
+# auth simple, bootstrap : simple-bootstrap
+if [ "$USERMODEL" = "1" ] && [ "$LAYOUT" = "2" ]
+  then
+  echo
+  echo "----> BRICKS: Simple authentication, Bootstrap 3 <----"
+  
+  echo
+  echo "---> Overriding default CSS ..."
+  rm app/assets/stylesheets/application.css.scss
+  cp ~/railsbricks/assets/bricks/common/css/bootstrap/application.css.scss app/assets/stylesheets/application.css.scss
+  rm app/assets/stylesheets/framework_and_overrides.css.scss
+  cp ~/railsbricks/assets/bricks/simple-bootstrap/css/framework_and_overrides.css.scss app/assets/stylesheets/framework_and_overrides.css.scss
+  echo
+  echo "---> Default CSS set."
+  
+  echo
+  echo "---> Creating Pages controller ..."
+  cp ~/railsbricks/assets/bricks/common/controllers/pages_controller.rb app/controllers/pages_controller.rb
+  echo
+  echo "---> Pages controller created."
+  
+  echo
+  echo "---> Updating application_helper.rb ..."
+  rm app/helpers/application_helper.rb
+  ~/railsbricks/assets/bricks/common/helpers/set_application_helper.rb $APPNAME
+  echo
+  echo "---> application_helper set."
+  
+  echo
+  echo "---> Updating routes.rb"
+  rm config/routes.rb
+  ~/railsbricks/assets/bricks/common/routes/simple/set_routes.rb $APPNAME
+  echo
+  echo "---> routes.rb updated."
+  
+  echo
+  echo "---> Creating Admin controllers ..."
+  mkdir app/controllers/admin
+  cp ~/railsbricks/assets/bricks/common/controllers/simple/admin/base_controller.rb app/controllers/admin/base_controller.rb
+  cp ~/railsbricks/assets/bricks/common/controllers/simple/admin/users_controller.rb app/controllers/admin/users_controller.rb
+  echo
+  echo "---> Admin controllers created."
+  
+  echo
+  echo "---> Creating Sessions controller ..."
+  cp ~/railsbricks/assets/bricks/common/controllers/simple/sessions_controller.rb app/controllers/sessions_controller.rb
+  echo
+  echo "---> Sessions controller created."
+  
+  echo
+  echo "---> Updating application.html.erb"
+  rm app/views/layouts/application.html.erb
+  ~/railsbricks/assets/bricks/common/layouts/bootstrap/set_application.rb $APPNAME
+  echo
+  echo "---> application.html.erb set."
+  
+  echo
+  echo "---> Creating a footer ..."
+  cp ~/railsbricks/assets/bricks/common/layouts/bootstrap/_footer.html.erb app/views/layouts/_footer.html.erb
+  echo
+  echo "---> Footer created."
+  
+  echo
+  echo "---> Updating navigation ..."
+  rm app/views/layouts/_navigation_links.html.erb
+  rm app/views/layouts/_navigation.html.erb
+  cp ~/railsbricks/assets/bricks/simple-bootstrap/views/layouts/_navigation_links.html.erb app/views/layouts/_navigation_links.html.erb
+  cp ~/railsbricks/assets/bricks/simple-bootstrap/views/layouts/_navigation.html.erb app/views/layouts/_navigation.html.erb
+  echo
+  echo "---> Navigation updated."
+  
+  echo
+  echo "---> Creating Home page ..."
+  mkdir app/views/pages
+  cp ~/railsbricks/assets/bricks/simple-bootstrap/views/pages/home.html.erb app/views/pages/home.html.erb
+  echo
+  echo "---> Home page created."
+  
+  echo
+  echo "---> Creating Sign in page ..."
+  mkdir app/views/sessions
+  cp ~/railsbricks/assets/bricks/simple-bootstrap/views/sessions/new.html.erb app/views/sessions/new.html.erb
+  echo
+  echo "---> Sign in page created."
+  
+  echo 
+  echo "---> Creating Admin views ..."
+  mkdir app/views/admin
+  mkdir app/views/admin/base
+  mkdir app/views/admin/users
+  cp ~/railsbricks/assets/bricks/simple-bootstrap/views/admin/base/index.html.erb app/views/admin/base/index.html.erb
+  cp ~/railsbricks/assets/bricks/simple-bootstrap/views/admin/users/edit.html.erb app/views/admin/users/edit.html.erb
+  echo
+  echo "---> Admin views created."
+  
+  echo
+  echo "----> BRICKS: selected brick generated."
+fi
 
 # TODO auth devise, reset CSS : devise-reset
 
