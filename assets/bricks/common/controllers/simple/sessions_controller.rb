@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-  def new    
+  def new
+    redirect_to(root_path, notice: "You are already signed in.") if current_user 
   end
   
   def create

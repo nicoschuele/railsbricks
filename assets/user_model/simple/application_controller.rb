@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   
   def user_signed_in?
-    @current_user ? true : false    
+    current_user ? true : false    
   end
   helper_method :user_signed_in?
   
