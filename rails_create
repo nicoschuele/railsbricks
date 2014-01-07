@@ -606,7 +606,17 @@ if [ "$USERMODEL" = "1" ] && [ "$LAYOUT" = "2" ]
   echo "----> BRICKS: selected brick generated."
 fi
 
-# TODO auth devise, reset CSS : devise-reset
+# auth devise, reset CSS : devise-reset
+if [ "$USERMODEL" = "2" ] && [ "$LAYOUT" = "1" ]
+  then
+  echo
+  echo "----> BRICKS: Devise authentication, reset CSS <----"
+  
+  # TODO Implements!
+  
+  echo
+  echo "----> BRICKS: selected brick generated."
+fi
 
 # TODO auth devise, bootstrap : devise-bootstrap
 

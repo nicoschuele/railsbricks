@@ -32,6 +32,9 @@ if result == "y"
     )
     u.skip_confirmation!
     u.save!
+    
+    puts "#{i} test users created..." if (i % 10 == 0)
+    
   end
   
 end

@@ -23,6 +23,12 @@ class ApplicationController < ActionController::Base
     }
   end
   
+  # Redirects on successful sign in
+  def after_sign_in_path_for(resource)
+    inside_path
+  end
+  
+  # Auto-sign out locked users
   def reject_locked!
     if current_user && current_user.locked?
       sign_out current_user
@@ -35,6 +41,7 @@ class ApplicationController < ActionController::Base
   end
   helper_method :reject_locked!
   
+  # Only permits admin users
   def require_admin!
     authenticate_user!
     
