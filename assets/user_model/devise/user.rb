@@ -43,12 +43,12 @@ class User < ActiveRecord::Base
   end
   
   def self.last_signups(count)
-    order(created_at: :desc).limit(count).select("id","username","created_at")
+    order(created_at: :desc).limit(count).select("id","username","slug","created_at")
   end
   
   def self.last_signins(count)
     order(last_sign_in_at: 
-    :desc).limit(count).select("id","username","last_sign_in_at")
+    :desc).limit(count).select("id","username","slug","last_sign_in_at")
   end
   
   def self.users_count
