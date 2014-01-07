@@ -1,13 +1,5 @@
 #!/bin/bash
 echo
-echo
-echo "************************************************"
-echo "*             RailsBricks v0.1.0               *"
-echo "*             ------------------               *"
-echo "*         http://www.railsbricks.net           *"
-echo "************************************************"
-echo
-echo 
 echo "Create a new Rails 4.0.2 app?(y/n):"
 
 # Continue?
@@ -875,7 +867,8 @@ echo " RailsBricks generated your app: $APPNAME"
 echo
 if [ "$USERMODEL" = "1" ] || [ "$USERMODEL" = "2" ]
   then
-  echo "The default admin account is:"
+  echo "Default admin accout"
+  echo "--------------------"
   echo "Username: admin"
   echo "Password: 1234"
   echo
