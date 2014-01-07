@@ -4,7 +4,7 @@ echo
 echo "************************************************"
 echo "*             RailsBricks v0.1.0               *"
 echo "*             ------------------               *"
-echo "*  https://github.com/nicoschuele/railsbricks  *"
+echo "*         http://www.railsbricks.net           *"
 echo "************************************************"
 echo
 echo 
@@ -263,6 +263,7 @@ if [ "$USERMODEL" = "1" ]
   echo "----> Creating seed data for Simple User Model ..."
   rm db/seeds.rb
   cp ~/railsbricks/assets/seed/simple/seeds.rb db/seeds.rb
+  echo
   echo "----> seed data for Simple User Model created."
 elif [ "$USERMODEL" = "2" ]
   then
@@ -270,6 +271,7 @@ elif [ "$USERMODEL" = "2" ]
   echo "----> Creating seed data for Devise User Model ..."
   rm db/seeds.rb
   cp ~/railsbricks/assets/seed/devise/seeds.rb db/seeds.rb
+  echo
   echo "----> seed data for Devise User Model created."
 else
   echo
@@ -324,6 +326,12 @@ if [ "$USERMODEL" = "3" ] && [ "$LAYOUT" = "1" ]
   ~/railsbricks/assets/bricks/common/layouts/reset/set_application.rb $APPNAME
   echo
   echo "---> application.html.erb set"
+  
+  echo 
+  echo "---> Creating flash messages partial ..."
+  cp ~/railsbricks/assets/bricks/common/layouts/reset/_messages.html.erb app/views/layouts/_messages.html.erb
+  echo
+  echo "---> Flash messages partial created."
   
   echo
   echo "---> Creating Home view ..."
@@ -411,7 +419,93 @@ if [ "$USERMODEL" = "3" ] && [ "$LAYOUT" = "2" ]
   echo "----> BRICKS: selected brick generated."
 fi
 
-# TODO auth simple, reset CSS : simple-reset
+# auth simple, reset CSS : simple-reset
+if [ "$USERMODEL" = "1" ] && [ "$LAYOUT" = "1" ]
+  then
+  echo
+  echo "----> BRICKS: Simple authentication, Bootstrap 3 <----"
+  
+  echo
+  echo "---> Overriding default CSS ..."
+  rm app/assets/stylesheets/application.css
+  cp ~/railsbricks/assets/bricks/common/css/reset/application.css.scss app/assets/stylesheets/application.css.scss
+  echo
+  echo "---> application.css.scss set."
+  
+  echo
+  echo "---> Creating Pages controller ..."
+  cp ~/railsbricks/assets/bricks/common/controllers/pages_controller.rb app/controllers/pages_controller.rb
+  echo
+  echo "---> Pages controller created."
+  
+  echo
+  echo "---> Updating application_helper.rb ..."
+  rm app/helpers/application_helper.rb
+  ~/railsbricks/assets/bricks/common/helpers/set_application_helper.rb $APPNAME
+  echo
+  echo "---> application_helper set."
+  
+  echo
+  echo "---> Updating routes.rb"
+  rm config/routes.rb
+  ~/railsbricks/assets/bricks/common/routes/simple/set_routes.rb $APPNAME
+  echo
+  echo "---> routes.rb updated."
+  
+  echo
+  echo "---> Creating Sign in view ..."
+  mkdir app/views/sessions
+  cp ~/railsbricks/assets/bricks/simple-reset/views/sessions/new.html.erb app/views/sessions/new.html.erb
+  echo
+  echo "---> Sign in view created."
+  
+  echo
+  echo "---> Creating Sessions controller ..."
+  cp ~/railsbricks/assets/bricks/common/controllers/simple/sessions_controller.rb app/controllers/sessions_controller.rb
+  echo
+  echo "---> Sessions controller created."
+  
+  echo
+  echo "---> Updating application.html.erb"
+  rm app/views/layouts/application.html.erb
+  ~/railsbricks/assets/bricks/common/layouts/reset/set_application.rb $APPNAME
+  echo
+  echo "---> application.html.erb set"
+  
+  echo 
+  echo "---> Creating flash messages partial ..."
+  cp ~/railsbricks/assets/bricks/common/layouts/reset/_messages.html.erb app/views/layouts/_messages.html.erb
+  echo
+  echo "---> Flash messages partial created."
+  
+  echo
+  echo "---> Creating Home page ..."
+  mkdir app/views/pages
+  cp ~/railsbricks/assets/bricks/simple-reset/views/pages/home.html.erb app/views/pages/home.html.erb
+  echo
+  echo "---> Home page created."
+  
+  echo
+  echo "---> Creating Admin controllers ..."
+  mkdir app/controllers/admin
+  cp ~/railsbricks/assets/bricks/common/controllers/simple/admin/base_controller.rb app/controllers/admin/base_controller.rb
+  cp ~/railsbricks/assets/bricks/common/controllers/simple/admin/users_controller.rb app/controllers/admin/users_controller.rb
+  echo
+  echo "---> Admin controllers created."
+  
+  echo 
+  echo "---> Creating Admin views ..."
+  mkdir app/views/admin
+  mkdir app/views/admin/base
+  mkdir app/views/admin/users
+  cp ~/railsbricks/assets/bricks/simple-reset/views/admin/base/index.html.erb app/views/admin/base/index.html.erb
+  cp ~/railsbricks/assets/bricks/simple-reset/views/admin/users/edit.html.erb app/views/admin/users/edit.html.erb
+  echo
+  echo "---> Admin views created."
+  
+  echo
+  echo "----> BRICKS: selected brick generated."
+fi
 
 # TODO auth simple, bootstrap : simple-bootstrap
 
@@ -468,7 +562,8 @@ echo
 echo "************************************************"
 echo " RailsBricks generated your app: $APPNAME"
 echo
-echo " https://github.com/nicoschuele/railsbricks"
+# TODO if auth, give username + password
+echo " http://www.railsbricks.net"
 echo "************************************************"
 echo
 echo "Have a great coding time!"
