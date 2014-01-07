@@ -1,0 +1,15 @@
+<% title("Home Page") %>
+<p>Home Page: views/pages/home.html.erb</p>
+
+<% if !user_signed_in? %>
+<p><%= link_to "Sign in", new_user_session_path %></p>
+<p><%= link_to "Sign up", new_user_registration_path %></p>
+<% else %>
+<p><%= link_to "Signed In page", inside_path %></p>
+
+<% if current_user.admin? %>
+<p><%= link_to "Admin", admin_root_path %></p>
+<% end %>
+
+<p><%= link_to "Sign out", destroy_user_session_path, data:{method: :delete} %></p>
+<% end %>
