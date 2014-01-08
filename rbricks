@@ -1,0 +1,2 @@
+#!/bin/bash
+railsbricks "$1"
