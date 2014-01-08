@@ -4,7 +4,7 @@
 echo 
 echo "----> destroying a Rails app and RVM gemset"
 echo 
-echo -n "Enter the Rails app name to destroy:"
+echo -n "Enter the Rails app name to destroy: "
 read APPNAME
 rm -rf $APPNAME
 rvm gemset delete $APPNAME

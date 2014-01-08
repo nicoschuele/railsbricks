@@ -1,6 +1,6 @@
 #!/bin/bash
 echo
-echo -n "Create a new Rails 4.0.2 app?(y/n):"
+echo -n "Create a new Rails 4.0.2 app?(y/n): "
 
 # Continue?
 read CONTNEW
@@ -13,7 +13,7 @@ fi
 
 # App name
 echo 
-echo -n "What do you want to call your app?:" 
+echo -n "What do you want to call your app?: " 
 read APPNAME
 
 # User model
@@ -23,7 +23,7 @@ echo "-----------"
 echo "1) Simple"
 echo "2) Devise"
 echo "3) None"
-echo -n "(1), (2), (3):"
+echo -n "(1), (2), (3): "
 read USERMODEL
 
 # Layout
@@ -32,7 +32,7 @@ echo "LAYOUT:"
 echo "-------------------"
 echo "1) Reset CSS"
 echo "2) Bootstrap 3 SASS"
-echo -n "(1)/(2):"
+echo -n "(1)/(2): "
 read LAYOUT
 
 # Env variables 
@@ -41,45 +41,45 @@ echo "ENVIRONMENT VARIABLES:"
 echo "----------------------"
 echo "What production domain?"
 echo "(example: www.example.com, app.example.com, ...)"
-echo -n ":"
+echo -n ": "
 read DOMAIN
 
 echo 
 echo "What mailer domain?"
 echo "(example: example.com)"
-echo -n ":"
+echo -n ": "
 read MAILERDOMAIN
 
 echo 
 echo "What SMTP server?"
 echo "(example: mail.example.com)"
-echo -n ":"
+echo -n ": "
 read SMTPSERVER
 
 echo 
-echo -n "What SMTP username?:"
+echo -n "What SMTP username?: "
 read SMTPUSER
 
 echo
-echo -n "What SMTP password?:"
+echo -n "What SMTP password?: "
 read SMTPPWD
 
 echo
-echo -n "Which email address to send mail from?:"
+echo -n "Which email address to send mail from?: "
 read SENDEREMAIL
 
 # Git
 echo
 echo "GIT CONFIG:"
 echo "----------------------------"
-echo -n "Init a Git repository?(y/n):"
+echo -n "Init a Git repository?(y/n): "
 read GITSET
 
 # Remote Git
 if [ "$GITSET" = "y" ]
   then
   echo
-  echo -n "Set a remote Git repository?(y/n):"
+  echo -n "Set a remote Git repository?(y/n): "
   read GITREMOTE
   
   if [ "$GITREMOTE" = "y" ]
@@ -87,7 +87,7 @@ if [ "$GITSET" = "y" ]
     echo
     echo "Remote Git repository URL?"
     echo "(example: https://my-name@bitbucket.org/my-name/my-app.git)"
-    echo -n ":"
+    echo -n ": "
     read GITREMOTEURL
   fi  
 fi

@@ -23,7 +23,7 @@ else
   echo "3) Recreate database"
   echo "4) Shortcuts"
   echo "5) Exit"
-  echo -n ":"
+  echo -n ": "
   read CHOICE
   
   if [ "$CHOICE" = "1" ]
