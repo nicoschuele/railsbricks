@@ -3,7 +3,7 @@
     <h1>Edit your account</h1>
 
     <% if @user.errors.any? %>
-    <div class="errors-container">
+    <div id="error_explanation">
       <ul>
         <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
