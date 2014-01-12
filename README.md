@@ -3,7 +3,7 @@
 _Boost your Rails development productivity with RailsBricks_
 
 ---
-- Title: nscripts
+- Title: RailsBricks
 - Author: Nico Schuele
 - Contact: nico@railsbricks.net
 - Twitter: @railsbricks
