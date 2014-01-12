@@ -871,10 +871,10 @@ echo " RailsBricks generated your app: $APPNAME"
 echo
 if [ "$USERMODEL" = "1" ] || [ "$USERMODEL" = "2" ]
   then
-  echo "Default admin accout"
-  echo "--------------------"
-  echo "Username: admin"
-  echo "Password: 1234"
+  echo " Default admin accout"
+  echo " --------------------"
+  echo " Username: admin"
+  echo " Password: 1234"
   echo
 fi
 echo " http://www.railsbricks.net"
