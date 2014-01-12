@@ -39,29 +39,35 @@ read LAYOUT
 echo
 echo "ENVIRONMENT VARIABLES:"
 echo "----------------------"
-echo "What production domain?"
+echo "Enter the production domain"
 echo "(example: www.example.com, app.example.com, ...)"
 echo -n ": "
 read DOMAIN
 
 echo 
-echo "What mailer domain?"
+echo "Enter the mailer domain"
 echo "(example: example.com)"
 echo -n ": "
 read MAILERDOMAIN
 
 echo 
-echo "What SMTP server?"
+echo "Enter the SMTP server"
 echo "(example: mail.example.com)"
 echo -n ": "
 read SMTPSERVER
 
 echo 
-echo -n "What SMTP username?: "
+echo "Enter the SMTP port"
+echo "(example: mail.example.com)"
+echo -n ": "
+read SMTPPORT
+
+echo 
+echo -n "Enter the SMTP username: "
 read SMTPUSER
 
 echo
-echo -n "What SMTP password?: "
+echo -n "Enter the SMTP password?: "
 read SMTPPWD
 
 echo
@@ -194,7 +200,7 @@ echo "----> date_format.rb initializer set."
 echo 
 echo "----> Setting application.yml ..."
 rm config/application.yml
-~/railsbricks/assets/figaro/set_figaro.rb $DOMAIN $MAILERDOMAIN $SMTPUSER $SMTPPWD $SENDEREMAIL $SMTPSERVER
+~/railsbricks/assets/figaro/set_figaro.rb $DOMAIN $MAILERDOMAIN $SMTPUSER $SMTPPWD $SENDEREMAIL $SMTPSERVER $SMTPPORT
 echo
 echo "----> application.yml set."
 

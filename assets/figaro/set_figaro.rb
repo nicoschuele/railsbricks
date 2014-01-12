@@ -7,6 +7,7 @@ smtp_user = ARGV.shift
 smtp_pwd = ARGV.shift
 sender_email = ARGV.shift
 smtp_server = ARGV.shift
+smtp_port = ARGV.shift
 
 File.open(file, "w") do |f|
   f.puts "# ENV VARIABLES"
@@ -16,4 +17,5 @@ File.open(file, "w") do |f|
   f.puts "SMTP_PWD: \"#{smtp_pwd}\""
   f.puts "SENDER_EMAIL: \"#{sender_email}\""
   f.puts "SMTP_SERVER: \"#{smtp_server}\""
+  f.puts "SMTP_PORT: #{smtp_port}"
 end
