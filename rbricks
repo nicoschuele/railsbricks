@@ -8,12 +8,18 @@ elif [ "$1" = "-D" ] || [ "$1" = "--destroy" ]
 elif [ "$1" = "-r" ] || [ "$1" = "--recreate-db" ]
   then
   rails_db_recreate
+elif [ "$1" = "-v" ] || [ "$1" = "--versions" ]
+  then
+  echo
+  echo "RailsBricks 1.0.1 (stable) by Nico Schuele <nico@railsbricks.net>"
+  echo "http://www.railsbricks.net"
+  echo
 else
 
   echo
   echo
   echo "************************************************"
-  echo "*             RailsBricks v1.0.0               *"
+  echo "*             RailsBricks v1.0.1               *"
   echo "*             ------------------               *"
   echo "*         http://www.railsbricks.net           *"
   echo "************************************************"
