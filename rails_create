@@ -57,9 +57,7 @@ echo -n ": "
 read SMTPSERVER
 
 echo 
-echo "Enter the SMTP port"
-echo "(example: mail.example.com)"
-echo -n ": "
+echo -n "Enter the SMTP port: "
 read SMTPPORT
 
 echo 
