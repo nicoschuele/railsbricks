@@ -11,7 +11,7 @@ elif [ "$1" = "-r" ] || [ "$1" = "--recreate-db" ]
 elif [ "$1" = "-v" ] || [ "$1" = "--versions" ]
   then
   echo
-  echo "RailsBricks 1.0.1 (stable) by Nico Schuele <nico@railsbricks.net>"
+  echo "RailsBricks 1.0.3 (stable) by Nico Schuele <nico@railsbricks.net>"
   echo "http://www.railsbricks.net"
   echo
 elif [ "$1" = "--update" ]
