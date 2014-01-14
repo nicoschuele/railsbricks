@@ -14,12 +14,23 @@ elif [ "$1" = "-v" ] || [ "$1" = "--versions" ]
   echo "RailsBricks 1.0.1 (stable) by Nico Schuele <nico@railsbricks.net>"
   echo "http://www.railsbricks.net"
   echo
+elif [ "$1" = "--update" ]
+  then
+  echo 
+  echo "----> Getting latest version from Github ..."
+  echo 
+  cd ~/railsbricks/
+  git pull https://github.com/nicoschuele/railsbricks.git
+  echo
+  echo "----> RailsBricks is up to date." 
+  echo
+  
 else
 
   echo
   echo
   echo "************************************************"
-  echo "*             RailsBricks v1.0.2               *"
+  echo "*             RailsBricks v1.0.3               *"
   echo "*             ------------------               *"
   echo "*         http://www.railsbricks.net           *"
   echo "************************************************"

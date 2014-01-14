@@ -4,7 +4,7 @@ _Boost your Rails development productivity with RailsBricks_
 
 ---
 - Title: RailsBricks
-- Version: 1.0.2
+- Version: 1.0.3
 - Author: Nico Schuele
 - Contact: nico@railsbricks.net
 - Twitter: @railsbricks
@@ -48,6 +48,14 @@ git clone https://github.com/nicoschuele/railsbricks.git
 
 ```
 PATH=$PATH:~/railsbricks
+```
+
+## Update
+
+To update RailsBricks to the latest version, just run the following command:
+
+```
+rbricks --update
 ```
 
 ## Tip
