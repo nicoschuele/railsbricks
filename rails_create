@@ -15,6 +15,7 @@ fi
 echo 
 echo -n "What do you want to call your app?: " 
 read APPNAME
+APPNAME=${APPNAME// /_}
 
 # User model
 echo
