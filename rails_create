@@ -834,6 +834,7 @@ fi
 # Migrating DB
 echo
 echo "----> Initializing the database ..."
+rake db:create:all
 rake db:migrate
 rake db:seed
 echo
