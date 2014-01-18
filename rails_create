@@ -101,17 +101,23 @@ fi
 echo
 echo "----> User input set."
 
-# RVM
+# Updating Rake
 echo
-echo "----> Creating RVM Gemset ..."
-[ -s "$HOME/.rvm/scripts/rvm" ] && . "$HOME/.rvm/scripts/rvm"
-rvm use 2.0.0@$APPNAME --create
+echo "----> Updating Rake ..."
+gem update rake
 echo
-echo "----> RVM Gemset created."
+echo "----> Rake updated."
+
+# Updating Bundler
+echo
+echo "----> Updating Bundler ..."
+gem update bundler
+echo
+echo "----> Bundler updated."
 
 # Rails 4.0.2
 echo
-echo "----> Installing Rails 4.0.2 into Gemset $APPNAME ..."
+echo "----> Installing Rails 4.0.2 ..."
 gem install rails -v 4.0.2
 echo
 echo "----> Rails 4.0.2 installed."
@@ -119,19 +125,12 @@ echo "----> Rails 4.0.2 installed."
 # Create app
 echo
 echo "----> Creating $APPNAME ..."
-rails new $APPNAME --skip-bundle
+rails _4.0.2_ new $APPNAME --skip-bundle
 echo
 echo "----> $APPNAME created."
 
 # cd into app
 cd "$APPNAME"
-
-# Set rvmrc
-echo
-echo "----> Setting .rvmrc ..."
-rvm --rvmrc 2.0.0@$APPNAME
-echo
-echo "----> .rvmrc set."
 
 # Set Gemfile
 echo
@@ -145,26 +144,26 @@ echo "----> Gemfile set."
 # Bundle install (no prod)
 echo 
 echo "----> Installing Gems ..."
-bundle install --without production
+bundle install --without production --path vendor/bundle
 echo 
 echo "----> Gems installed."
 
 # Config Gems (kaminari, figaro & friendly_id)
 echo
 echo "----> Kaminari config ..."
-rails generate kaminari:config
+rails _4.0.2_ generate kaminari:config
 echo
 echo "----> Kaminari set."
 
 echo
 echo "----> Figaro config ..."
-rails generate figaro:install
+rails _4.0.2_ generate figaro:install
 echo
 echo "----> Figaro set."
 
 echo 
 echo "----> Friendly_id config ..."
-rails generate friendly_id
+rails _4.0.2_ generate friendly_id
 echo
 echo "----> Friendly_id set."
 
@@ -173,7 +172,7 @@ if [ "$LAYOUT" = "2" ]
   then
   echo
   echo "----> Generating Bootstrap 3 layout ..."
-  rails generate layout bootstrap3 --force
+  rails _4.0.2_ generate layout bootstrap3 --force
   echo
   echo "----> Bootstrap 3 layout generated"  
 fi
@@ -183,7 +182,7 @@ if [ "$USERMODEL" = "2" ]
   then
   echo 
   echo "----> Setting Devise ..."
-  rails generate devise:install
+  rails _4.0.2_ generate devise:install
   echo
   echo "----> Devise set."
 fi
@@ -225,7 +224,7 @@ if [ "$USERMODEL" = "1" ]
   then 
   echo
   echo "----> Setting Simple User model ..."
-  rails g model User username email password_digest admin:boolean slug
+  rails _4.0.2_ g model User username email password_digest admin:boolean slug
   ~/railsbricks/assets/user_model/simple/set_user.rb
   
   rm app/controllers/application_controller.rb
@@ -239,7 +238,7 @@ elif [ "$USERMODEL" = "2" ]
   then
   echo
   echo "----> Setting Devise User model ..."
-  rails g devise User
+  rails _4.0.2_ g devise User
   ~/railsbricks/assets/user_model/devise/set_user.rb
   
   rm app/controllers/application_controller.rb

@@ -4,13 +4,17 @@ _Boost your Rails development productivity with RailsBricks_
 
 ---
 - Title: RailsBricks
-- Version: 1.0.5
+- Version: 1.1.0
 - Author: Nico Schuele
 - Contact: nico@railsbricks.net
 - Twitter: @railsbricks
 
 ---
 
+
+## Important
+
+If you use previous versions of RailsBricks, please note that since version 1.1.0, RailsBricks removed the dependency on [RVM](https://rvm.io). It will still work with RVM but it now also works fine for non-RVM users. Thanks to [Nikkau](https://github.com/Nikkau) for the tips.
 
 ## Features
 
@@ -27,7 +31,6 @@ _Boost your Rails development productivity with RailsBricks_
 In order to use RailsBricks, you need the following:
 
 - A nix-based OS. That can be any flavour of Linux or Mac OS X. **currently, RailsBricks doesn't run on Windows**. If you are a Microsoft Windows-based Rails developer, have a look at [Nitrous.IO](http://www.nitrous.io) 
-- Ruby Version Manager (RVM) must be installed on your machine. Get it here: https://rvm.io
 - some knowledge of Rails (!)
 
 ## Install
@@ -83,12 +86,6 @@ Visit [railsbricks.net](http://www.railsbricks.net) to see an intro video and so
 
 ```
 rbricks -n
-```
-
-### Destroying a Rails app
-
-```
-rbricks -D
 ```
 
 ### Resetting the database

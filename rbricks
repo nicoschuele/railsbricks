@@ -11,34 +11,27 @@ elif [ "$1" = "-r" ] || [ "$1" = "--recreate-db" ]
 elif [ "$1" = "-v" ] || [ "$1" = "--versions" ]
   then
   echo
-  echo "RailsBricks 1.0.5 (stable) by Nico Schuele <nico@railsbricks.net>"
+  echo "RailsBricks 1.1.0 (stable) by Nico Schuele <nico@railsbricks.net>"
   echo "http://www.railsbricks.net"
   echo
 elif [ "$1" = "--update" ]
   then
-  echo 
-  echo "----> Getting latest version from Github ..."
-  echo 
-  cd ~/railsbricks/
-  git pull https://github.com/nicoschuele/railsbricks.git
-  echo
-  echo "----> RailsBricks is up to date." 
-  echo
+  rbricks_update
   
 else
 
   echo
   echo
   echo "************************************************"
-  echo "*             RailsBricks v1.0.5               *"
+  echo "*             RailsBricks v1.1.0               *"
   echo "*             ------------------               *"
   echo "*         http://www.railsbricks.net           *"
   echo "************************************************"
   echo
   echo "1) Create a new Rails app"
-  echo "2) Destroy a Rails app"
-  echo "3) Recreate database"
-  echo "4) Shortcuts"
+  echo "2) Recreate database"
+  echo "3) Shortcuts"
+  echo "4) Update RailsBricks"
   echo "5) Exit"
   echo -n ": "
   read CHOICE
@@ -48,20 +41,20 @@ else
     rails_create
   elif [ "$CHOICE" = "2" ]
     then
-    rails_destroy
-  elif [ "$CHOICE" = "3" ]
-    then
     rails_db_recreate
-  elif [ "$CHOICE" = "4" ]
+  elif [ "$CHOICE" = "3" ]
     then
     echo
     echo "rbricks -n (or rbricks --new):" 
     echo " - creates a new Rails app with RailsBricks templates"
-    echo "rbricks -D (or rbricks --destroy):"     
-    echo " - destroys a Rails app and its RVM gemset"
     echo "rbricks -r (or rbricks --recreate-db):" 
     echo " - drop, migrate and seed the development database"
+    echo "rbricks --update:" 
+    echo " - updates RailsBricks to the latest version"
     echo
+  elif [ "$CHOICE" = "4" ]
+    then
+    rbricks_update
   else
     exit 1
   fi
