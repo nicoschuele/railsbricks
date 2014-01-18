@@ -1,8 +1,9 @@
 #!/bin/bash
 echo 
-echo "----> db:drop, db:migrate, db:seed"
+echo "----> db:drop, db:create, db:migrate, db:seed"
 echo 
 rake db:drop
+rake db:create
 rake db:migrate
 rake db:seed
 echo 
