@@ -31,6 +31,7 @@ If you use previous versions of RailsBricks, please note that since version 1.1.
 In order to use RailsBricks, you need the following:
 
 - A nix-based OS. That can be any flavour of Linux or Mac OS X. **currently, RailsBricks doesn't run on Windows**. If you are a Microsoft Windows-based Rails developer, have a look at [Nitrous.IO](http://www.nitrous.io) 
+- Ruby 2.0.0 (this will change soon as the next version of RailsBricks will let you choose which version of Ruby)
 - some knowledge of Rails (!)
 
 ## Install
@@ -63,7 +64,7 @@ rbricks --update
 
 ## Tip
 
-As RailsBricks will be in your `PATH`, you can simply type a few letters and then press the `tab` key. It will autocomplete the name in your terminal. Example:
+As RailsBricks will be in your `PATH`, you can simply type a few letters and then press the <kbd>tab</kbd> key. It will autocomplete the name in your terminal. Example:
 
 ```
 rbr + tab
