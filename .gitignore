@@ -1,0 +1,9 @@
+*.gem
+.bundle
+.idea
+*.DS_Store
+*.tmp
+Gemfile.lock
+gemfiles/*.lock
+doc
+log
