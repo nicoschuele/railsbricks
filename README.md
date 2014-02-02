@@ -159,6 +159,7 @@ If you have any question or feedback, drop me a line at nico@railsbricks.net or 
 
 - [Nikkau](https://github.com/Nikkau), for showing me how to segregate gems without using RVM
 - [Joelle Gobbo](http://ch.linkedin.com/pub/joelle-gobbo/32/4b5/a9b), for the elegant snippet used to generate a valid Rails app name
+- the authors of the many gems used by RailsBricks
 - everyone who emailed me, gave feedback, opened an issue on Github, tweeted, etc. I truly love the Rails community.
 
 ## License
