@@ -155,5 +155,11 @@ You like RailsBricks and want to contribute to its development? Cool! You can do
 ## Questions, Feedback
 If you have any question or feedback, drop me a line at nico@railsbricks.net or tweet at @railsbricks
 
+## Acknowledgments
+
+- [Nikkau](https://github.com/Nikkau), for showing me how to segregate gems without using RVM
+- [Joelle Gobbo](http://ch.linkedin.com/pub/joelle-gobbo/32/4b5/a9b), for the elegant snippet used to generate a valid Rails app name
+- everyone who emailed me, gave feedback, opened an issue on Github, tweeted, etc. I truly love the Rails community.
+
 ## License
 Released under GNU GPL-3. Copyright (c) 2013 - Nico Schuele. See LICENSE.txt for further details.
