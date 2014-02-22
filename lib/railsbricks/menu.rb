@@ -115,7 +115,7 @@ class Menu
       if @verbose
         wputs "Ok, I've got enough information about your environment for now.", :info
         new_line
-        wputs "Let's talk about the app you want to create. I can tell you it will be a Rails 4.0.2 app and that the gem Rails 4.0.2 will be installed globally (in your main gem location, that is). So, if you already have other versions of Rails installed, don't forget to call your 'rails' command with the correct version, like 'rails _4.0.2_ server', for example.", :info
+        wputs "Let's talk about the app you want to create. I can tell you it will be a Rails 4.0.3 app and that the gem Rails 4.0.3 will be installed globally (in your main gem location, that is). So, if you already have other versions of Rails installed, don't forget to call your 'rails' command with the correct version, like 'rails _4.0.3_ server', for example.", :info
         new_line
         wputs "If you wonder, other gems will be isolated from your other ones and installed within 'vendor/bundle' inside your app.", :info
       end
