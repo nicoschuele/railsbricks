@@ -207,7 +207,7 @@ class AppCreator
         FileHelpers.replace_string("# RAILSBRICKS_TEST_FRAMEWORK","config.generators.test_framework false", "config/application.rb")
       elsif @options[:test_framework] == "rspec"
         FileUtils.rm_rf("test")
-        FileHelpers.replace_string("# RAILSBRICKS_TEST_FRAMEWORK","config.generators.test_framework false", "config/application.rb")
+        FileHelpers.replace_string("# RAILSBRICKS_TEST_FRAMEWORK","config.generators.test_framework :rspec", "config/application.rb")
         new_line
         wputs "---> RSpec ..."
         puts `rails _4.0.3_ generate rspec:install`
