@@ -5,12 +5,12 @@ module Version
 
   MAJOR = 2
   MINOR = 0
-  PATCH = 3
+  PATCH = 4
   PRE = nil
 
   YEAR = "2014"
   MONTH = "02"
-  DAY = "01"
+  DAY = "26"
 
   VERSION_REMOTE_FILE = "http://assets.nicoschuele.com/rbr-version.txt"
   INFO_REMOTE_FILE = "http://assets.nicoschuele.com/rbr-info.txt"
