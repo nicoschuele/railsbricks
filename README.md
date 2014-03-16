@@ -33,7 +33,7 @@ If you currently use RailsBricks 1.x, **you must first uninstall it** as RailsBr
 In order to use RailsBricks, you need the following:
 
 - A nix-based OS. That can be any flavour of Linux or Mac OS X. **RailsBricks may run on Windows but it was not extensively tested**. Still, reports say it runs fine.
-- Ruby (1.9.3, 2.0.0 or 2.1.0-preview)
+- Ruby (1.9.3, 2.0.0 or 2.1.1)
 - some knowledge of Rails (!)
 
 ## Install

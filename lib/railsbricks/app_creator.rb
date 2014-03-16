@@ -27,7 +27,7 @@ class AppCreator
     # update required gems
     update_gems
 
-    # install Rails 4.0.3
+    # install Rails 4.0.4
     rails_install
 
     # app creation
@@ -108,14 +108,14 @@ class AppCreator
 
   def rails_install
     new_line(2)
-    wputs "----> Installing Rails 4.0.3 ..."
+    wputs "----> Installing Rails 4.0.4 ..."
     new_line
-    puts `#{@options[:gem_command]} install rails -v 4.0.3 --no-rdoc --no-ri`
+    puts `#{@options[:gem_command]} install rails -v 4.0.4 --no-rdoc --no-ri`
     new_line
-    wputs "----> Rails 4.0.3 installed."
+    wputs "----> Rails 4.0.4 installed."
 
   rescue
-    Errors.display_error("Something went wrong and Rails 4.0.3 couldn't be installed. Stopping app creation.", true)
+    Errors.display_error("Something went wrong and Rails 4.0.4 couldn't be installed. Stopping app creation.", true)
     abort
 
   end
@@ -210,7 +210,7 @@ class AppCreator
         FileHelpers.replace_string("# RAILSBRICKS_TEST_FRAMEWORK","config.generators.test_framework :rspec", "config/application.rb")
         new_line
         wputs "---> RSpec ..."
-        puts `rails _4.0.3_ generate rspec:install`
+        puts `rails _4.0.4_ generate rspec:install`
         wputs "---> RSpec set."
       else
         wputs "---> Nothing to do.", :info
