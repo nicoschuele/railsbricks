@@ -108,14 +108,14 @@ class AppCreator
 
   def rails_install
     new_line(2)
-    wputs "----> Installing Rails 4.0.4 ..."
+    wputs "----> Installing Rails 4.1.4 ..."
     new_line
-    puts `#{@options[:gem_command]} install rails -v 4.0.4 --no-rdoc --no-ri`
+    puts `#{@options[:gem_command]} install rails -v 4.1.4 --no-rdoc --no-ri`
     new_line
-    wputs "----> Rails 4.0.4 installed."
+    wputs "----> Rails 4.1.4 installed."
 
   rescue
-    Errors.display_error("Something went wrong and Rails 4.0.4 couldn't be installed. Stopping app creation.", true)
+    Errors.display_error("Something went wrong and Rails 4.1.4 couldn't be installed. Stopping app creation.", true)
     abort
 
   end

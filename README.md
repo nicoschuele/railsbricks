@@ -4,8 +4,8 @@ _Boost your Rails development productivity with RailsBricks_
 
 ---
 - Title: RailsBricks
-- Version: 2.0.5
-- Author: Nico Schuele
+- Version: 2.1.0
+- Author: Nico Schuele (www.nicoschuele.com)
 - Contact: nico@railsbricks.net
 - Twitter: @railsbricks
 
@@ -33,7 +33,7 @@ If you currently use RailsBricks 1.x, **you must first uninstall it** as RailsBr
 In order to use RailsBricks, you need the following:
 
 - A nix-based OS. That can be any flavour of Linux or Mac OS X. **RailsBricks may run on Windows but it was not extensively tested**. Still, reports say it runs fine.
-- Ruby (1.9.3, 2.0.0 or 2.1.1)
+- Ruby (1.9.3, 2.0.0, 2.1.1 or 2.1.2)
 - some knowledge of Rails (!)
 
 ## Install
@@ -159,8 +159,9 @@ If you have any question or feedback, drop me a line at nico@railsbricks.net or 
 
 - [Nikkau](https://github.com/Nikkau), for showing me how to segregate gems without using RVM
 - [Joelle Gobbo](http://ch.linkedin.com/pub/joelle-gobbo/32/4b5/a9b), for the elegant snippet used to generate a valid Rails app name
+- [Jim Meyer](https://github.com/purp), for forking RailsBricks and creating an alternative version I also use
 - the authors of the many gems used by RailsBricks
-- everyone who emailed me, gave feedback, opened an issue on Github, tweeted, etc. I truly love the Rails community.
+- everyone who emailed me, gave feedback, opened an issue on Github, submitted a pull request, tweeted, etc. I truly love the Rails community.
 
 ## License
 Released under GNU GPL-3. Copyright (c) 2013 - Nico Schuele. See LICENSE.txt for further details.

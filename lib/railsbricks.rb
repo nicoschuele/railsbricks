@@ -36,10 +36,6 @@ class Railsbricks
     elsif args[0] == "--config"
       display_config
 
-    # check for latest news
-    elsif args[0] == "-i" || args[0] == "--info"
-      check_info
-
     # adds a brick
     elsif args[0] == "-a" || args[0] == "--add"
       # TODO implement bricks add-on system
@@ -68,23 +64,10 @@ class Railsbricks
 
   def self.version
     puts
-    StringHelpers.wputs "RailsBricks #{Version.current} by Nico Schuele <nico@railsbricks.net> - http://www.railsbricks.net - source: https://github.com/nicoschuele/railsbricks", :info
+    StringHelpers.wputs "RailsBricks #{Version.current} by Nico Schuele (www.nicoschuele.com) <nico@railsbricks.net> - http://www.railsbricks.net - source: https://github.com/nicoschuele/railsbricks", :info
     puts
   end
-
-  def self.check_info
-    puts
-    StringHelpers.wputs "----> Checking RailsBricks server for latest news ...", :info
-    puts
-    StringHelpers.wputs Version.check_info
-    puts
-    StringHelpers.wputs "----> Latest news retrieved.", :info
-    puts
-
-  rescue
-    Errors.display_error "RailsBricks couldn't establish a connection with the server. In most cases, this is due to your firewall rules.", true
-
-  end
+  
 
   def self.display_config
     puts
@@ -135,21 +118,6 @@ class Railsbricks
     puts
     StringHelpers.wputs "More help, tutorials and documentation at http://www.railsbricks.net/get-started", :info
     puts
-
-  end
-
-  def self.latest_version
-    puts
-    StringHelpers.wputs "----> Checking RailsBricks server for latest version number ...", :info
-    puts
-    StringHelpers.wputs Version.check_latest
-    puts
-    StringHelpers.wputs "----> Latest version number retrieved.", :info
-    puts
-
-
-  rescue
-    Errors.display_error "RailsBricks couldn't establish a connection with the server. In most cases, this is due to your firewall rules.", true
 
   end
 

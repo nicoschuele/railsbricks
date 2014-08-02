@@ -18,6 +18,10 @@ module ConfigHelpers
   def self.load_config
     config_json = File.read("#{CONFIG_PATH}/config")
     JSON.parse(config_json)
+  rescue
+    options = {}
+    options["rake_command"] = "rake"
+    options
   end
 
 end
