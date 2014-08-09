@@ -4,7 +4,7 @@ _Boost your Rails development productivity with RailsBricks_
 
 ---
 - Title: RailsBricks
-- Version: 2.1.1
+- Version: 2.1.2
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: nico@railsbricks.net
 - Twitter: @railsbricks
@@ -99,6 +99,13 @@ rbricks -n
 ```
 rbricks -r
 ```
+
+### Installing gems inside 'vendor/bundle' path without production
+
+```
+rbribcks -b
+```
+
 
 ## Options
 

@@ -16,6 +16,10 @@ class Railsbricks
     elsif args[0] == "-r" || args[0] == "--recreate"
       db_recreate
 
+    # install gems in vendor path
+    elsif args[0] == "-b" || args[0] == "--bundle"
+      bundle_install
+
     # update RailsBricks
     elsif args[0] == "--update"
       rbricks_update
@@ -67,7 +71,16 @@ class Railsbricks
     StringHelpers.wputs "RailsBricks #{Version.current} by Nico Schuele (www.nicoschuele.com) <nico@railsbricks.net> - http://www.railsbricks.net - source: https://github.com/nicoschuele/railsbricks", :info
     puts
   end
-  
+
+  def self.bundle_install
+    puts
+    StringHelpers.wputs "----> Installing required gems in 'vendor/bundle' without production ...  ", :info
+    StringHelpers.wputs "(...please wait...)", :error
+    puts `bundle install --without production --path vendor/bundle`
+    puts
+    StringHelpers.wputs "----> Gems installed in 'vendor/bundle'.", :info
+    puts
+  end
 
   def self.display_config
     puts
