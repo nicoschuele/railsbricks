@@ -73,7 +73,11 @@ class AppCreator
       wputs "***************************"
       wputs "Your default admin account:", :info
       new_line
-      wputs "Username: admin"
+      if options[:authentication] == "devise-email"
+        wputs "Email: admin@example.com"
+      else
+        wputs "Username: admin"
+      end
       wputs "Password: 1234"
       wputs "***************************"
     end
@@ -133,10 +137,14 @@ class AppCreator
       FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/simple-reset/rbricksgen/.", @APP_DIR)
     elsif @options[:authentication] == "simple" && @options[:ui] == "bootstrap3"
       FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/simple-bootstrap/rbricksgen/.", @APP_DIR)
-    elsif @options[:authentication] == "devise" && @options[:ui] == "reset"
-      FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/devise-reset/rbricksgen/.", @APP_DIR)
-    elsif @options[:authentication] == "devise" && @options[:ui] == "bootstrap3"
-      FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/devise-bootstrap/rbricksgen/.", @APP_DIR)
+    elsif @options[:authentication] == "devise-email" && @options[:ui] == "reset"
+      FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/devise-email-reset/rbricksgen/.", @APP_DIR)
+    elsif @options[:authentication] == "devise-email" && @options[:ui] == "bootstrap3"
+      FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/devise-email-bootstrap/rbricksgen/.", @APP_DIR)
+    elsif @options[:authentication] == "devise-username" && @options[:ui] == "reset"
+      FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/devise-username-reset/rbricksgen/.", @APP_DIR)
+    elsif @options[:authentication] == "devise-username" && @options[:ui] == "bootstrap3"
+      FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/devise-username-bootstrap/rbricksgen/.", @APP_DIR)
     else
       FileUtils.cp_r(@RBRICK_DIR + "/assets/bricks/none-reset/rbricksgen/.", @APP_DIR)
     end
@@ -157,7 +165,7 @@ class AppCreator
       wputs "---> Heroku gems added."
     end
 
-    if @options[:authentication] == "devise"
+    if @options[:authentication][0..5] == "devise"
       new_line
       wputs "---> Adding Devise gem ..."
       devise_gemfile = File.read(@RBRICK_DIR + "/assets/common/gemfile/Devise")
@@ -289,14 +297,15 @@ class AppCreator
       if @options[:test_users] != nil
         FileHelpers.replace_string(/TESTUSERS/,@options[:test_users].to_s,@RBRICK_DIR + "/assets/common/seeds/simple/seeds.rb", @APP_DIR + "/db/seeds.rb")
       else
-        FileUtils.cp(@RBRICK_DIR + "/assets/common/seeds/simple/seeds-no-test.rb", @APP_DIR + "/db/seeds.rb")
+        FileUtils.cp(@RBRICK_DIR + "/assets/common/seeds/simple/seeds-no-test-email.rb", @APP_DIR + "/db/seeds.rb")
       end
 
-    elsif @options[:authentication] == "devise"
+    elsif @options[:authentication][0..5] == "devise"
+      devise_option = @options[:authentication][6..-1] 
       if @options[:test_users] != nil
-        FileHelpers.replace_string(/TESTUSERS/,@options[:test_users].to_s,@RBRICK_DIR + "/assets/common/seeds/devise/seeds.rb", @APP_DIR + "/db/seeds.rb")
+        FileHelpers.replace_string(/TESTUSERS/,@options[:test_users].to_s,@RBRICK_DIR + "/assets/common/seeds/devise/seeds#{devise_option}.rb", @APP_DIR + "/db/seeds.rb")
       else
-        FileUtils.cp(@RBRICK_DIR + "/assets/common/seeds/devise/seeds-no-test.rb", @APP_DIR + "/db/seeds.rb")
+        FileUtils.cp(@RBRICK_DIR + "/assets/common/seeds/devise/seeds-no-test#{devise_option}.rb", @APP_DIR + "/db/seeds.rb")
       end
 
     else

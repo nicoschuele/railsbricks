@@ -215,14 +215,17 @@ class Menu
       new_line
       wputs "- Which authentication model do you want to use?"
       hputs "1. Simple authentication (default)"
-      hputs "2. Devise"
-      hputs "3. No authentication"
-      print "Your choice (1-3): "
+      hputs "2. Devise (login with email)"
+      hputs "3. Devise (login with username)"
+      hputs "4. No authentication"
+      print "Your choice (1-4): "
       choice = STDIN.gets.chomp.strip
       case choice
         when "2"
-          options[:authentication] = "devise"
+          options[:authentication] = "devise-email"
         when "3"
+          options[:authentication] = "devise-username"
+        when "4"
           options[:authentication] = "none"
         else
           options[:authentication] = "simple"
@@ -247,7 +250,7 @@ class Menu
       #
       #end
 
-      if options[:authentication] == "devise" || options[:authentication] == "simple"
+      if options[:authentication][0..5] == "devise" || options[:authentication] == "simple"
 
         # test users
         new_line
