@@ -4,7 +4,7 @@ _Boost your Rails development productivity with RailsBricks_
 
 ---
 - Title: RailsBricks
-- Version: 2.1.2
+- Version: 2.2.0
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: nico@railsbricks.net
 - Twitter: @railsbricks
@@ -167,6 +167,7 @@ If you have any question or feedback, drop me a line at nico@railsbricks.net or 
 - [Nikkau](https://github.com/Nikkau), for showing me how to segregate gems without using RVM
 - [Joelle Gobbo](http://ch.linkedin.com/pub/joelle-gobbo/32/4b5/a9b), for the elegant snippet used to generate a valid Rails app name
 - [Jim Meyer](https://github.com/purp), for forking RailsBricks and creating an alternative version I also use
+- [David Hsu](https://github.com/dvdhsu), for adding a new Brick: Devise authentication using only an email address
 - the authors of the many gems used by RailsBricks
 - everyone who emailed me, gave feedback, opened an issue on Github, submitted a pull request, tweeted, etc. I truly love the Rails community.
 

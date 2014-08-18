@@ -68,7 +68,9 @@ class Railsbricks
 
   def self.version
     puts
-    StringHelpers.wputs "RailsBricks #{Version.current} by Nico Schuele (www.nicoschuele.com) <nico@railsbricks.net> - http://www.railsbricks.net - source: https://github.com/nicoschuele/railsbricks", :info
+    StringHelpers.wputs "RailsBricks #{Version.current}", :info
+    StringHelpers.wputs "http://www.railsbricks.net - source: https://github.com/nicoschuele/railsbricks", :info
+    StringHelpers.wputs "by Nico Schuele (www.nicoschuele.com) <nico@railsbricks.net>", :info 
     puts
   end
 
