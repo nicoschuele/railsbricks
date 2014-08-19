@@ -1,9 +1,9 @@
 # RSpec
 group :test, :development do
-  gem "rspec-rails", '3.0.2'
+  gem 'rspec-rails', '3.0.2'
 end
 
 # Capybara
 group :test do
-  gem "capybara", '~> 2.4.1'
+  gem 'capybara', '2.4.1'
 end

@@ -4,7 +4,7 @@ _Boost your Rails development productivity with RailsBricks_
 
 ---
 - Title: RailsBricks
-- Version: 2.2.0
+- Version: 2.2.1
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: nico@railsbricks.net
 - Twitter: @railsbricks
