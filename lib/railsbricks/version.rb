@@ -4,13 +4,13 @@ require 'uri'
 module Version
 
   MAJOR = 2
-  MINOR = 2
-  PATCH = 1
+  MINOR = 3
+  PATCH = 0
   PRE = nil
 
   YEAR = "2014"
-  MONTH = "08"
-  DAY = "19"
+  MONTH = "09"
+  DAY = "13"
 
   def self.to_s
     [MAJOR, MINOR, PATCH, PRE].compact.join(".")

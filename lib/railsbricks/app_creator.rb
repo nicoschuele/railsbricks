@@ -112,14 +112,14 @@ class AppCreator
 
   def rails_install
     new_line(2)
-    wputs "----> Installing Rails 4.1.5 ..."
+    wputs "----> Installing Rails 4.1.6 ..."
     new_line
-    puts `#{@options[:gem_command]} install rails -v 4.1.5 --no-rdoc --no-ri`
+    puts `#{@options[:gem_command]} install rails -v 4.1.6 --no-rdoc --no-ri`
     new_line
-    wputs "----> Rails 4.1.5 installed."
+    wputs "----> Rails 4.1.6 installed."
 
   rescue
-    Errors.display_error("Something went wrong and Rails 4.1.5 couldn't be installed. Stopping app creation.", true)
+    Errors.display_error("Something went wrong and Rails 4.1.6 couldn't be installed. Stopping app creation.", true)
     abort
 
   end
@@ -297,7 +297,7 @@ class AppCreator
       if @options[:test_users] != nil
         FileHelpers.replace_string(/TESTUSERS/,@options[:test_users].to_s,@RBRICK_DIR + "/assets/common/seeds/simple/seeds.rb", @APP_DIR + "/db/seeds.rb")
       else
-        FileUtils.cp(@RBRICK_DIR + "/assets/common/seeds/simple/seeds-no-test-email.rb", @APP_DIR + "/db/seeds.rb")
+        FileUtils.cp(@RBRICK_DIR + "/assets/common/seeds/simple/seeds-no-test.rb", @APP_DIR + "/db/seeds.rb")
       end
 
     elsif @options[:authentication][0..5] == "devise"

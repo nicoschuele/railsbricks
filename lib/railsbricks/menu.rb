@@ -48,16 +48,13 @@ class Menu
       wputs "- Which version of Ruby do you want to use?"
       hputs "1. 1.9.3"
       hputs "2. 2.0.0"
-      hputs "3. 2.1.1"
-      hputs "4. 2.1.2 (default)"
+      hputs "3. 2.1.2 (default)"
       print "Your choice (1-4): "
       choice = STDIN.gets.chomp.strip
       if choice == "1"
         options[:ruby_version] = "1.9.3"
       elsif choice == "2"
         options[:ruby_version] = "2.0.0"
-      elsif choice == "3"
-        options[:ruby_version] = "2.1.1"
       else
         options[:ruby_version] = "2.1.2"
       end
@@ -97,7 +94,7 @@ class Menu
       hputs "2. rbenv"
       hputs "3. other"
       hputs "4. none (default)"
-      print "Your choice (1-4): "
+      print "Your choice (1-3): "
       choice = STDIN.gets.chomp.strip
       case choice
         when "1"
@@ -118,7 +115,7 @@ class Menu
       if @verbose
         wputs "Ok, I've got enough information about your environment for now.", :info
         new_line
-        wputs "Let's talk about the app you want to create. I can tell you it will be a Rails 4.1.5 app and that the gem Rails 4.1.5 will be installed globally (in your main gem location, that is). So, if you already have other versions of Rails installed, don't forget to call your 'rails' command with the correct version, like 'rails _4.1.5_ server', for example.", :info
+        wputs "Let's talk about the app you want to create. I can tell you it will be a Rails 4.1.6 app and that the gem Rails 4.1.6 will be installed globally (in your main gem location, that is). So, if you already have other versions of Rails installed, don't forget to call your 'rails' command with the correct version, like 'rails _4.1.6_ server', for example.", :info
         new_line
         wputs "If you wonder, other gems will be isolated from your other ones and installed within 'vendor/bundle' inside your app.", :info
       end
