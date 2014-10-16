@@ -1,0 +1,23 @@
+<% title("Post Drafts") %>
+<h3 class="page-title">Posts <small>Drafts</small></h3>
+<p><%= link_to "Back to dashboard", admin_posts_dashboard_path %></p>
+<hr/>
+
+<p class="pagination-summary"><%= page_entries_info @posts %></p>
+<%= paginate @posts %>  
+
+<hr/>
+
+<ul class="fa-ul">
+	<% @posts.each do |post| %>
+	<li class="margin-md-down">
+		<i class="fa fa-arrow-circle-o-right small"></i>&nbsp;&nbsp;
+		<%= link_to post.title, edit_admin_post_path(post.slug) %> <br/> 
+		<small class="x-small-text">about <%= time_ago_in_words(post.updated_at) %> ago</small>
+	</li>
+	<% end %>
+</ul>
+
+<hr/>
+
+<%= paginate @posts %>  

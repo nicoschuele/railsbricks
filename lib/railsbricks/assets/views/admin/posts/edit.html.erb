@@ -1,0 +1,10 @@
+<% title("Edit #{@post.title}") %>
+<h3 class="page-title">Edit post <small><%= @post.title %></small></h3>
+<p>
+	<%= link_to "Back to dashboard", admin_posts_dashboard_path %>
+</p>
+<hr/>
+
+<%= render 'form' %>
+<hr/>
+<%= link_to "<i class='fa fa-minus-square'></i> Delete post".html_safe, admin_post_path(@post), method: :delete, data:{confirm: "Are you sure?"}, class: "btn btn-small btn-danger" %>

@@ -8,7 +8,7 @@ module ConfigHelpers
   def self.create_config(app_dir, options = {})
     FileUtils::mkdir_p "#{app_dir}/#{CONFIG_PATH}"
     dup_options = options.dup
-    dup_options[:smtp_password] = "******"
+    dup_options[:email_config][:password] = "******"
     saved_options = dup_options.to_json
 
     File.open("#{app_dir}/#{CONFIG_PATH}/config", "w") { |f| f.write(saved_options)}

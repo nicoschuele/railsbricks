@@ -1,0 +1,12 @@
+# PostgreSQL
+#   Ensure the PostgreSQL gem is defined in your Gemfile
+#   gem 'pg'
+development: 
+  adapter: postgresql 
+  encoding: utf8 
+  database: BRICK_DB_NAME 
+  username: BRICK_DB_USERNAME
+  host: BRICK_DB_SERVER
+  pool: 5
+  port: BRICK_DB_PORT
+  BRICK_DB_PASSWORD

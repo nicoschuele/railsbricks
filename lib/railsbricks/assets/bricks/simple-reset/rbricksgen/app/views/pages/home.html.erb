@@ -1,9 +1,0 @@
-<% title("Home Page") %>
-<p><i class="fa fa-home"></i> Home Page: views/pages/home.html.erb</p>
-
-<% if !current_user %>
-<p><%= link_to "Sign in", signin_path %></p>
-<% else %>
-<p><%= link_to "Admin", admin_root_path %></p>
-<p><%= link_to "Sign out", signout_path %></p>
-<% end %>

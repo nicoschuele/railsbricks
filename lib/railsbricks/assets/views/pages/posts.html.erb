@@ -1,0 +1,18 @@
+<% title("Posts") %>
+<h1>Posts</h1>
+
+<% @posts.each do |post| %>
+	
+<div class="title-box">
+  <p>
+    <%= link_to "#{post.title}", post_path(post.slug) %> <br/>
+    <span><small><em><%= time_ago_in_words(post.updated_at) %> ago</em></small></span>
+  </p>
+
+</div>
+	
+<% end %>
+	
+<div class="pagination-control text-center">
+  <%= paginate @posts %> 
+</div>

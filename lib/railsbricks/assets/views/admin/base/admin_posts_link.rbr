@@ -1,0 +1,1 @@
+<h4><%= link_to "Posts", admin_posts_dashboard_path %> <small>- <%= "#{pluralize(@post_count, 'post')}" %></small></h4>

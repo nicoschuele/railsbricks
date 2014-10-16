@@ -1,16 +1,13 @@
-require 'net/http'
-require 'uri'
-
 module Version
 
-  MAJOR = 2
-  MINOR = 3
+  MAJOR = 3
+  MINOR = 0
   PATCH = 0
   PRE = nil
-
+  
   YEAR = "2014"
   MONTH = "09"
-  DAY = "13"
+  DAY = "14"
 
   def self.to_s
     [MAJOR, MINOR, PATCH, PRE].compact.join(".")
@@ -19,11 +16,10 @@ module Version
   def self.current
     to_s
   end
-
+  
   def self.current_date
     "#{YEAR}-#{MONTH}-#{DAY}"
   end
-  
 
   def self.version_to_h(version)
     version_array = version.split(/\./)
@@ -33,7 +29,6 @@ module Version
     version_hash[:patch] = version_array[2]
     version_hash[:pre] = version_array[3]
     version_hash
-
   end
 
 end

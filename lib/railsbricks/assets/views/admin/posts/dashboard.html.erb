@@ -1,0 +1,9 @@
+<% title("Posts Dashboard") %>
+<h3 class="page-title">Posts <small>Dashboard</small></h3>
+<p><%= link_to "Back to Admin", admin_root_path %></p>
+<hr/>
+<div class="row">
+  <div class="col-sm-4">Published: <%= link_to "#{pluralize(@published_post_count, 'post')}", admin_posts_path %></div>
+  <div class="col-sm-4">Drafts: <%= link_to "#{pluralize(@draft_post_count, 'draft')}", admin_posts_drafts_path %></div>
+  <div class="col-sm-4"><%= link_to "New post", new_admin_post_path %></div>
+</div>
