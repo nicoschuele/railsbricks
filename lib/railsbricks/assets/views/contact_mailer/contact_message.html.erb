@@ -2,4 +2,4 @@
 <p>--------------</p>
 <p>From: <%= @name %> - <%= @email %></p>
 <p>--------------</p>
-<pre><%= @message %></pre>
+<%= sanitize(line_break(@message), tags: %w(br)) %>

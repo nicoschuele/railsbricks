@@ -1,4 +1,5 @@
 class ContactMailer < ActionMailer::Base
+  add_template_helper(EmailHelper)
   default from: ENV["SENDER_EMAIL"]
 
   
