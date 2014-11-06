@@ -29,7 +29,7 @@ _Create **Rails** apps. **Faster**._
 
 In order to use RailsBricks, you need the following:
 
-* A nix-based OS. That can be any flavour of Linux or OS X. **RailsBricks may run on Windows but it was not extensively tested**. Still, reports say it runs fine.
+* A nix-based OS. That can be any flavour of Linux or OS X. **RailsBricks doesn't run on Windows** *(and there are currently no plans to make it run on Windows)*.
 * Ruby (version 2.0+)
 * Some knowledge of Rails (!)
 
