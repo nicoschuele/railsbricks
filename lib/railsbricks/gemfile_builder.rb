@@ -7,8 +7,8 @@ require_relative "config_values"
 
 module GemfileBuilder
   BCRYPT = "3.1.9"
-  BOOTSTRAP_SASS = "3.3.0.1"
-  COFFEE_RAILS = "4.0.1"
+  BOOTSTRAP_SASS = "3.3.1.0"
+  COFFEE_RAILS = "4.1.0"
   DEVISE = "3.4.1"
   FIGARO = "1.0.0"
   FONT_AWESOME_SASS = "4.2.2"
@@ -17,9 +17,9 @@ module GemfileBuilder
   JQUERY_RAILS = "3.1.2"
   KAMINARI = "0.16.1"
   REDCARPET = "3.2.0"
-  SASS_RAILS = "4.0.3"
+  SASS_RAILS = "4.0.4"
   SQLITE3 = "1.3.10"
-  TURBOLINKS = "2.5.1"
+  TURBOLINKS = "2.5.2"
   UGLIFIER = "2.5.3"
   
   

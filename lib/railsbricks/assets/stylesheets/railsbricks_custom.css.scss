@@ -361,6 +361,85 @@ blockquote{
 	font-family: $font-family-monospace;
 	font-size: 12px;
 }
+
+.center-block{
+  margin-left: auto;
+  margin-right: auto;
+}
+//***********************************************************
+
+//***********************************************************
+// SPACING
+$space-lg: 60px;
+$space-md: 40px;
+$space-sm: 20px;
+$space-xs: 10px;
+
+.space-top-lg{
+  margin-top: $space-lg;
+}
+.space-top-md{
+  margin-top: $space-md;
+}
+.space-top-sm{
+  margin-top: $space-sm;
+}
+.space-top-xs{
+  margin-top: $space-xs;
+}
+
+.space-bottom-lg{
+  margin-bottom: $space-lg;
+}
+.space-bottom-md{
+  margin-bottom: $space-md;
+}
+.space-bottom-sm{
+  margin-bottom: $space-sm;
+}
+.space-bottom-xs{
+  margin-bottom: $space-xs;
+}
+
+.space-left-lg{
+  margin-left: $space-lg;
+}
+.space-left-md{
+  margin-left: $space-md;
+}
+.space-left-sm{
+  margin-left: $space-sm;
+}
+.space-left-xs{
+  margin-left: $space-xs;
+}
+
+.space-right-lg{
+  margin-right: $space-lg;
+}
+.space-right-md{
+  margin-right: $space-md;
+}
+.space-right-sm{
+  margin-right: $space-sm;
+}
+.space-right-xs{
+  margin-right: $space-xs;
+}
+
+.space-all-lg{
+  margin: $space-lg;
+}
+.space-all-md{
+  margin: $space-md;
+}
+.space-all-sm{
+  margin: $space-sm;
+}
+.space-all-xs{
+  margin: $space-xs;
+}
+
 //***********************************************************
 
 //***********************************************************
@@ -410,6 +489,28 @@ blockquote{
 img {
   @extend .img-responsive;
 }
+
+.img-inline{
+  display: inline;
+}
+
+.img-block{
+  display: block;
+}
+
+.img-framed{
+  border: 1px solid #cccccc;
+  box-shadow: 2px 2px 6px #dddddd;
+  border-radius: 4px;
+}
+
+.img-title{
+  color: #bbbbbb;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 4px;
+}
+
 //***********************************************************
 
 //***********************************************************

@@ -4,7 +4,7 @@ _Create **Rails** apps. **Faster**._
 
 ---
 - Title: RailsBricks
-- Version: 3.0.1
+- Version: 3.0.2
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: nico@railsbricks.net
 - Homepage: http://www.railsbricks.net
@@ -29,9 +29,19 @@ _Create **Rails** apps. **Faster**._
 
 In order to use RailsBricks, you need the following:
 
-* A nix-based OS. That can be any flavour of Linux or OS X. **RailsBricks doesn't run on Windows** *(and there are currently no plans to make it run on Windows)*.
+* A nix-based OS. That can be any flavour of Linux or OS X 
 * Ruby (version 2.0+)
 * Some knowledge of Rails (!)
+
+## What about Windows?
+
+**RailsBricks doesn't run out of the box on Windows**: You will first need to install the [DevKit](http://rubyinstaller.org/downloads/) (thanks to David Camarena for pointing this out) as well as the [tzinfo-data](https://github.com/tzinfo/tzinfo-data) gem.
+
+## Ruby support
+
+RailsBricks generates Rails apps with support for the current major Ruby release (currently, 2.0.0) + the current point release and the previous one, for example 2.1.5 & 2.1.4. If you need to use another version of Ruby, you will have to manually edit the Gemfile after the app gets created and update the following line with your chosen version number:
+
+`ruby '2.1.5'`
 
 ## Install
 
