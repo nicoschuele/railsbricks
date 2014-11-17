@@ -4,7 +4,7 @@ _Create **Rails** apps. **Faster**._
 
 ---
 - Title: RailsBricks
-- Version: 3.0.2
+- Version: 3.0.3
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: nico@railsbricks.net
 - Homepage: http://www.railsbricks.net
@@ -35,7 +35,7 @@ In order to use RailsBricks, you need the following:
 
 ## What about Windows?
 
-**RailsBricks doesn't run out of the box on Windows**: You will first need to install the [DevKit](http://rubyinstaller.org/downloads/) (thanks to David Camarena for pointing this out) as well as the [tzinfo-data](https://github.com/tzinfo/tzinfo-data) gem.
+**RailsBricks doesn't run out of the box on Windows**. Read the [Windows Installation Guide](http://railsbricks.net/windows) to know what to do. You will first need to install the [DevKit](http://rubyinstaller.org/downloads/) as well as the [tzinfo-data](https://github.com/tzinfo/tzinfo-data) gem.
 
 ## Ruby support
 
@@ -76,6 +76,7 @@ If you have any question or feedback, drop me a line at nico@railsbricks.net or 
 * [David Hsu](https://github.com/dvdhsu), for adding a new Brick: Devise authentication using only an email address
 * the authors of the many gems used by RailsBricks
 * the [Geneva.rb](http://www.meetup.com/genevarb/) Meetup Group for the beer!
+* David Camarena for fiddling with RailsBricks long enough to have it run on Windows
 * everyone who emailed me, gave feedback, opened an issue on Github, submitted a pull request, tweeted, etc. I truly love the Rails community.
 
 ## License

@@ -13,7 +13,7 @@ module GemfileBuilder
   FIGARO = "1.0.0"
   FONT_AWESOME_SASS = "4.2.2"
   FRIENDLY_ID = "5.0.4"
-  JBUILDER = "2.2.4"
+  JBUILDER = "2.2.5"
   JQUERY_RAILS = "3.1.2"
   KAMINARI = "0.16.1"
   REDCARPET = "3.2.0"

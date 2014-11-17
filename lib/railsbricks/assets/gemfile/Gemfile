@@ -11,6 +11,9 @@ gem 'turbolinks', 'BRICK_TURBOLINKS_VERSION'
 gem 'jbuilder', 'BRICK_JBUILDER_VERSION'
 gem 'bcrypt', 'BRICK_BCRYPT_VERSION'
 
+# Necessary for Windows OS (won't install on *nix systems)
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
 # Kaminari: https://github.com/amatsuda/kaminari
 gem 'kaminari', 'BRICK_KAMINARI_VERSION'
 
