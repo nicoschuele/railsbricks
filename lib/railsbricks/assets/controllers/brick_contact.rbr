@@ -17,7 +17,7 @@
       flash[:alert] = "You can't send links. Thank you for your understanding."
       render :contact
     else    
-      ContactMailer.contact_message(@name,@email,@message).deliver
+      ContactMailer.contact_message(@name,@email,@message).deliver_now
       redirect_to root_path, notice: "Your message was sent. Thank you."
     end
   end

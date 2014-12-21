@@ -4,7 +4,7 @@ _Create **Rails** apps. **Faster**._
 
 ---
 - Title: RailsBricks
-- Version: 3.0.3
+- Version: 3.1.0
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: nico@railsbricks.net
 - Homepage: http://www.railsbricks.net
@@ -76,7 +76,7 @@ If you have any question or feedback, drop me a line at nico@railsbricks.net or 
 * [David Hsu](https://github.com/dvdhsu), for adding a new Brick: Devise authentication using only an email address
 * the authors of the many gems used by RailsBricks
 * the [Geneva.rb](http://www.meetup.com/genevarb/) Meetup Group for the beer!
-* David Camarena for fiddling with RailsBricks long enough to have it run on Windows
+* David Camarena for producing a [fork](https://github.com/athalas/railsbricks) with support for MySQL
 * everyone who emailed me, gave feedback, opened an issue on Github, submitted a pull request, tweeted, etc. I truly love the Rails community.
 
 ## License

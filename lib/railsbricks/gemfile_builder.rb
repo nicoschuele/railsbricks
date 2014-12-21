@@ -13,14 +13,17 @@ module GemfileBuilder
   FIGARO = "1.0.0"
   FONT_AWESOME_SASS = "4.2.2"
   FRIENDLY_ID = "5.0.4"
-  JBUILDER = "2.2.5"
-  JQUERY_RAILS = "3.1.2"
+  JBUILDER = "2.2.6"
+  JQUERY_RAILS = "4.0.2"
   KAMINARI = "0.16.1"
-  REDCARPET = "3.2.0"
-  SASS_RAILS = "4.0.4"
+  REDCARPET = "3.2.2"
+  SASS_RAILS = "5.0.0"
   SQLITE3 = "1.3.10"
-  TURBOLINKS = "2.5.2"
-  UGLIFIER = "2.5.3"
+  TURBOLINKS = "2.5.3"
+  UGLIFIER = "2.6.0"
+  BYEBUG = "3.5.1"
+  WEB_CONSOLE = "2.0.0"
+  SPRING = "1.2.0"
   
   
   def self.build_gemfile(app_dir, options)
@@ -90,6 +93,9 @@ module GemfileBuilder
     FileHelpers.replace_string(/BRICK_SQLITE3_VERSION/, SQLITE3, app_dir + "/Gemfile")
     FileHelpers.replace_string(/BRICK_TURBOLINKS_VERSION/, TURBOLINKS, app_dir + "/Gemfile")
     FileHelpers.replace_string(/BRICK_UGLIFIER_VERSION/, UGLIFIER, app_dir + "/Gemfile")
+    FileHelpers.replace_string(/BRICK_BYEBUG_VERSION/, BYEBUG, app_dir + "/Gemfile")
+    FileHelpers.replace_string(/BRICK_WEB_CONSOLE_VERSION/, WEB_CONSOLE, app_dir + "/Gemfile")
+    FileHelpers.replace_string(/BRICK_SPRING_VERSION/, SPRING, app_dir + "/Gemfile")
     
     new_line
     wputs "----> Gemfile generated.", :info

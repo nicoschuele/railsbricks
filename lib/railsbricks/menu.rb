@@ -358,7 +358,7 @@ class Menu
     
     # body theme
     if hints
-      wputs "I will use Bootstrap 3 to build the UI of your app. You can change Boostrap default values by editing #{@options[:app_name]}/app/assets/railsbricks_custom.css.scss.", :help
+      wputs "I will use Bootstrap 3 to build the UI of your app. You can change Boostrap default values by editing #{@options[:app_name]}/app/assets/railsbricks_custom.scss.", :help
     end
     new_line
     wputs "- Which UI scheme do you want to use for the content area?"
@@ -386,7 +386,7 @@ class Menu
         
     # primary color
     if hints
-      wputs "The primary color is expressed as a hexadecimal value such as #663399 (purple). In #{@options[:app_name]}/app/assets/railsbricks_custom.css.scss, the primary color is assigned to a variable named '$brand-primary'. It is used as the base color for links, default buttons, etc... .", :help
+      wputs "The primary color is expressed as a hexadecimal value such as #663399 (purple). In #{@options[:app_name]}/app/assets/railsbricks_custom.scss, the primary color is assigned to a variable named '$brand-primary'. It is used as the base color for links, default buttons, etc... .", :help
       new_line
     end
     wputs "- What primary color do you want to use?"
