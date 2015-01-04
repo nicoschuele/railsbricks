@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
   s.email       = 'nicoschuele@gmail.com'
   s.files       = `git ls-files`.split($/)
   s.homepage    = 'http://www.railsbricks.net'
-  s.license     = 'MIT'
+  s.license     = 'GNU GPL-3'
 end

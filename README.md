@@ -62,7 +62,7 @@ You like RailsBricks and want to contribute to its development? Cool! You can do
 * Fork the code and implement an awesome feature
 * Found a bug or a quirk? Fix it!
 
-...then, submit a pull request.
+**Important**: before working on a new feature, [contact me](http://railsbricks.net/contact) or [open an issue](https://github.com/nicoschuele/railsbricks/issues) on Github explaining what you'd like to implement. I'm trying to keep the maintenance of RailsBricks as easy and fast as possible so before accepting a feature or a PR, we need to make sure it will be maintained properly and within an appropriate timeframe. 
 
 ## Questions, Feedback
 
@@ -81,4 +81,4 @@ If you have any question or feedback, drop me a line at nico@railsbricks.net or 
 
 ## License
 
-Released under GNU GPL-3. Copyright (c) 2014 - Nico Schuele. See LICENSE.txt for further details.
+Released under GNU GPL-3. Copyright (c) 2014-2015 Nico Schuele. See LICENSE.txt for further details.
