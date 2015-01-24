@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.version     = Version.current
   s.executables << 'rbricks'
   s.date        = Version.current_date
-  s.summary     = "gem summary"
-  s.description = "gem description"
+  s.summary     = "Creates rails apps with sensible defaults."
+  s.description = "RailsBricks enables you to create Rails apps much faster by automating mundane setup tasks and configuring useful common gems for you. "
   s.authors     = ["Nico Schuele"]
   s.email       = 'nicoschuele@gmail.com'
   s.files       = `git ls-files`.split($/)
