@@ -1,25 +1,25 @@
 class Admin::PostsController < Admin::BaseController
-  
+
   before_action :set_post, only: [
     :edit,
     :update,
     :destroy
   ]
-  
-  
+
+
   def dashboard
     @published_post_count = Post.published.count
     @draft_post_count = Post.drafted.count
   end
-  
+
   def index
     @posts = Post.published.page(params[:page]).per(50)
   end
-  
+
   def drafts
-    @posts = Post.drafted.page(params[:page]).per(50)    
+    @posts = Post.drafted.page(params[:page]).per(50)
   end
-  
+
   def new
     @post = Post.new
   end
@@ -52,14 +52,14 @@ class Admin::PostsController < Admin::BaseController
     @post.destroy
     redirect_to admin_posts_path, notice: "The post has been deleted."
   end
-  
-  
+
+
   private
-  
+
   def set_post
     @post = Post.friendly.find(params[:id])
   end
-  
+
   def post_params
     params.require(:post).permit(
     :title,
@@ -68,6 +68,6 @@ class Admin::PostsController < Admin::BaseController
     :updated_at
     )
   end
-  
-  
+
+
 end

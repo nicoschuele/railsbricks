@@ -8,17 +8,14 @@ module FileHelpers
     text_update = text_update.gsub(key, new_value)
 
     File.open(target_file, "w") { |f| f.write(text_update) }
-
   rescue
     Errors.display_error "Something went wrong. The file '#{target_file}' couldn't be created and/or updated. Aborting app creation.", true
     abort
-
   end
 
   def self.override_file(source_file, target_file)
     FileUtils.rm(target_file)
     FileUtils.cp(source_file,target_file)
-
   rescue
     Errors.display_error "Couldn't override #{target_file}. Aborting app creation.", true
     abort
@@ -31,17 +28,17 @@ module FileHelpers
       f.puts
       f.puts
       f.write(text)
-      
+
     end
   rescue
     Errors.display_error "Couldn't write inside #{target_file}. Aborting app creation.", true
     abort
   end
-  
+
   def self.get_file(template = :none)
     rbricks_dir = File.dirname(__FILE__)
     replacement_text = ""
-    case template    
+    case template
       when :brick_contact_controller then replacement_text = File.read(rbricks_dir + "/assets/controllers/brick_contact.rbr")
       when :brick_contact_routes then replacement_text = File.read(rbricks_dir + "/assets/config/contact_routes.rbr")
       when :brick_allow_signup_links then replacement_text = File.read(rbricks_dir + "/assets/views/devise/allow_signup_links.rbr")
@@ -51,7 +48,6 @@ module FileHelpers
       when :brick_posts_controller then replacement_text = File.read(rbricks_dir + "/assets/controllers/posts_controller.rbr")
       when :brick_admin_posts_link then replacement_text = File.read(rbricks_dir + "/assets/views/admin/base/admin_posts_link.rbr")
     end
-    
     replacement_text
   end
 

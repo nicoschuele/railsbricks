@@ -11,8 +11,6 @@ u = User.new(
 u.skip_confirmation!
 u.save!
 
-
-
 # Test user accounts
 (1..50).each do |i|
   u = User.new(
@@ -26,5 +24,3 @@ u.save!
   puts "#{i} test users created..." if (i % 5 == 0)
 
 end
-  
-

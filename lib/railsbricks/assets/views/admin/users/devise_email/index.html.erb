@@ -8,11 +8,11 @@
 </div>
 
 <%= form_tag admin_users_path, method: 'get', html: {role: "form"} do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil, class: "btn btn-sm btn-primary" %>
-    <%= link_to "All", admin_users_path, {class: "btn btn-sm btn-link"} %>
-  </p>
+<p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil, class: "btn btn-sm btn-primary" %>
+  <%= link_to "All", admin_users_path, {class: "btn btn-sm btn-link"} %>
+</p>
 <% end %>
 
 <table class="table table-striped">
@@ -26,9 +26,9 @@
     <th>Last Sign In</th>
     <th>Last Sign In IP</th>
   </tr>
-  
+
   <% @users.each do |user| %>
-  
+
   <tr>
     <td><%= user.id %></td>
     <td><%= link_to user.email, admin_user_path(user) %></td>
@@ -43,9 +43,9 @@
     <% end %>
     <td><%= user.last_sign_in_ip %></td>
   </tr>
-  
+
   <% end %>
-  
+
 </table>
 
 <div class="text-center">

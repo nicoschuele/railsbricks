@@ -4,7 +4,7 @@ module Version
   MINOR = 1
   PATCH = 3
   PRE = nil
-  
+
   YEAR = "2015"
   MONTH = "01"
   DAY = "04"
@@ -16,7 +16,7 @@ module Version
   def self.current
     to_s
   end
-  
+
   def self.current_date
     "#{YEAR}-#{MONTH}-#{DAY}"
   end

@@ -6,7 +6,7 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content_html
       t.boolean :draft, default: false
       t.integer :user_id
-      
+
       # FriendlyId
       t.string :slug
 

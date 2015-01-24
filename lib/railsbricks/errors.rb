@@ -7,12 +7,12 @@ module Errors
     puts
     StringHelpers.wputs msg, :error
     puts
-    
+
     if show_issues_url
       StringHelpers.wputs "If you can't fix this error, please file an issue report at #{ConfigValues.issue_path}"
       puts
     end
-    
+
   end
 
 end

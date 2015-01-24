@@ -5,9 +5,9 @@ class PagesController < ApplicationController
 
   def home
   end
-  
+
   def inside
   end
-  BRICK_POSTS_CONTROLLER 
-  BRICK_CONTACT_CONTROLLER  
+  BRICK_POSTS_CONTROLLER
+  BRICK_CONTACT_CONTROLLER
 end

@@ -6,9 +6,9 @@ module ConfigValues
   def self.rails_version
     RAILS_VERSION
   end
-  
+
   def self.issue_path
     ISSUE_PATH
   end
-  
+
 end

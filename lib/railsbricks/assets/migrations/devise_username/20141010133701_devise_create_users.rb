@@ -8,10 +8,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       ## Admin
       t.boolean :admin, :null => false, :default => false
-      
+
       ## Lock
       t.boolean :locked, :null => false, :default => false
-      
+
       ## Friendly_id
       t.string :slug
 

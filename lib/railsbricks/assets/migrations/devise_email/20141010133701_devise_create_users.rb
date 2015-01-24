@@ -7,10 +7,10 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
       ## Admin
       t.boolean :admin, :null => false, :default => false
-      
+
       ## Lock
       t.boolean :locked, :null => false, :default => false
-      
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

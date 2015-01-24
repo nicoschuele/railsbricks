@@ -77,6 +77,7 @@ If you have any question or feedback, [drop me a line](http://railsbricks.net/co
 * the authors of the many gems used by RailsBricks
 * the [Geneva.rb](http://www.meetup.com/genevarb/) Meetup Group for the beer!
 * David Camarena for producing a [fork](https://github.com/athalas/railsbricks) with support for MySQL
+* [Felix Wolfsteller](https://github.com/fwolfst) for doing a bit of clean-up
 * everyone who emailed me, gave feedback, opened an issue on Github, submitted a pull request, tweeted, etc. I truly love the Rails community.
 
 ## License

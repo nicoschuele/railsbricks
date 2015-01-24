@@ -11,5 +11,3 @@ u = User.new(
 )
 u.skip_confirmation!
 u.save!
-
-

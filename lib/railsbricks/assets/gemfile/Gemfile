@@ -32,7 +32,7 @@ group :development, :test do
 
   # Figaro: https://github.com/laserlemon/figaro
   gem 'figaro', 'BRICK_FIGARO_VERSION'
-  
+
   # Spring: https://github.com/rails/spring
   gem 'spring', 'BRICK_SPRING_VERSION'
 end
