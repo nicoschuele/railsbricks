@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   # Markdown
-  before_save { Markdown.update_html(self) }
+  before_save { MarkdownWriter.update_html(self) }
 
   # Validations
   validates :title, presence: true, length: { maximum: 100 }, uniqueness: true

@@ -19,8 +19,8 @@ module PostBuilder
     wputs "--> Migration created."
 
     # Markdown helper
-    FileUtils.cp_r(rbricks_dir + "/assets/lib/markdown.rb", app_dir + "/lib")
-    wputs "--> Markdown helper created."
+    FileUtils.cp_r(rbricks_dir + "/assets/lib/markdown_writer.rb", app_dir + "/lib")
+    wputs "--> MarkdownWriter helper created."
 
     # Routes
     FileHelpers.replace_string(/BRICK_POST_ROUTES/, FileHelpers.get_file(:brick_post_routes), app_dir + "/config/routes.rb")
