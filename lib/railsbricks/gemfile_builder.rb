@@ -16,7 +16,7 @@ module GemfileBuilder
   JBUILDER = "2.2.6"
   JQUERY_RAILS = "4.0.3"
   KAMINARI = "0.16.2"
-  REDCARPET = "3.2.0"
+  REDCARPET = "3.2.2"
   SASS_RAILS = "5.0.1"
   SQLITE3 = "1.3.10"
   TURBOLINKS = "2.5.3"
