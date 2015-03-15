@@ -5,7 +5,6 @@
 u = User.new(
     email: "admin@example.com",
     password: "1234",
-    password_confirmation: "1234",
     admin: true
 )
 u.skip_confirmation!
@@ -16,7 +15,6 @@ u.save!
   u = User.new(
       email: "user#{i}@example.com",
       password: "1234",
-      password_confirmation: "1234"
   )
   u.skip_confirmation!
   u.save!
