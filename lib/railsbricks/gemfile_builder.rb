@@ -7,13 +7,13 @@ require_relative "config_values"
 
 module GemfileBuilder
   BCRYPT = "3.1.10"
-  BOOTSTRAP_SASS = "3.3.3"
+  BOOTSTRAP_SASS = "3.3.4.1"
   COFFEE_RAILS = "4.1.0"
   DEVISE = "3.4.1"
   FIGARO = "1.1.0"
-  FONT_AWESOME_SASS = "4.3.1"
+  FONT_AWESOME_SASS = "4.3.2.1"
   FRIENDLY_ID = "5.1.0"
-  JBUILDER = "2.2.11"
+  JBUILDER = "2.2.12"
   JQUERY_RAILS = "4.0.3"
   KAMINARI = "0.16.3"
   REDCARPET = "3.2.2"
@@ -21,8 +21,8 @@ module GemfileBuilder
   SQLITE3 = "1.3.10"
   TURBOLINKS = "2.5.3"
   UGLIFIER = "2.7.1"
-  BYEBUG = "3.5.1"
-  WEB_CONSOLE = "2.1.1"
+  BYEBUG = "4.0.4"
+  WEB_CONSOLE = "2.1.2"
   SPRING = "1.3.3"
 
   def self.build_gemfile(app_dir, options)

@@ -16,7 +16,7 @@ u.save!
   u = User.new(
       username: "user#{i}",
       email: "user#{i}@example.com",
-      password: "1234",
+      password: "1234"
   )
   u.skip_confirmation!
   u.save!

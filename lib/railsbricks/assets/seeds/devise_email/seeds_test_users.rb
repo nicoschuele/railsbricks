@@ -14,7 +14,7 @@ u.save!
 (1..50).each do |i|
   u = User.new(
       email: "user#{i}@example.com",
-      password: "1234",
+      password: "1234"
   )
   u.skip_confirmation!
   u.save!
