@@ -4,7 +4,7 @@ _Create **Rails** apps. **Faster**._
 
 ---
 - Title: RailsBricks
-- Version: 3.1.7
+- Version: 3.1.8
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: [contact page](http://railsbricks.net/contact)
 - Homepage: http://www.railsbricks.net

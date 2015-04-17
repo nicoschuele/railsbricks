@@ -264,6 +264,7 @@ class AppGenerator
     FileHelpers.replace_string(/BRICK_APP_NAME/, @options[:rails_app_name], @app_dir + "/config/environments/production.rb")
     FileHelpers.replace_string(/BRICK_APP_NAME/, @options[:rails_app_name], @app_dir + "/config/initializers/secret_token.rb")
     FileHelpers.replace_string(/BRICK_APP_NAME/, @options[:rails_app_name], @app_dir + "/config/initializers/session_store.rb")
+    FileHelpers.replace_string(/BRICK_SESSION/, @options[:rails_app_name].downcase, @app_dir + "/config/initializers/session_store.rb")
     new_line
     wputs "----> App name set.", :info
   end

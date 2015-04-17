@@ -13,17 +13,17 @@ module GemfileBuilder
   FIGARO = "1.1.0"
   FONT_AWESOME_SASS = "4.3.2.1"
   FRIENDLY_ID = "5.1.0"
-  JBUILDER = "2.2.12"
+  JBUILDER = "2.2.13"
   JQUERY_RAILS = "4.0.3"
   KAMINARI = "0.16.3"
-  REDCARPET = "3.2.2"
-  SASS_RAILS = "5.0.1"
+  REDCARPET = "3.2.3"
+  SASS_RAILS = "5.0.3"
   SQLITE3 = "1.3.10"
   TURBOLINKS = "2.5.3"
   UGLIFIER = "2.7.1"
-  BYEBUG = "4.0.4"
+  BYEBUG = "4.0.5"
   WEB_CONSOLE = "2.1.2"
-  SPRING = "1.3.3"
+  SPRING = "1.3.4"
 
   def self.build_gemfile(app_dir, options)
     new_line(2)
