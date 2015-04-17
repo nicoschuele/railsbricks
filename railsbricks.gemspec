@@ -3,6 +3,7 @@ require "./lib/railsbricks/version"
 Gem::Specification.new do |s|
   s.name        = 'railsbricks'
   s.version     = Version.current
+  s.required_ruby_version = '>= 2.0'
   s.executables << 'rbricks'
   s.date        = Version.current_date
   s.summary     = "Create Rails apps. Faster."
