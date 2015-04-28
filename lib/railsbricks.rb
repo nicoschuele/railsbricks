@@ -47,7 +47,7 @@ class Railsbricks
   end
 
   def self.annotate
-    puts 
+    puts
     StringHelpers.wputs "----> Annotating models and routes ...", :info
     puts
     system "bundle exec annotate"

@@ -25,7 +25,7 @@ module GemfileBuilder
   TURBOLINKS = "2.5.3"
   UGLIFIER = "2.7.1"
   WEB_CONSOLE = "2.1.2"
-  
+
 
   def self.build_gemfile(app_dir, options)
     new_line(2)

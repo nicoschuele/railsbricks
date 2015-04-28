@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, BRICK_ALLOW_SIGNUP
   :recoverable, :rememberable, :trackable, :validatable, :confirmable
-  
+
   # Pagination
   paginates_per 100
 
