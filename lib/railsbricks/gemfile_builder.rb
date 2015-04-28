@@ -8,6 +8,7 @@ require_relative "config_values"
 module GemfileBuilder
   BCRYPT = "3.1.10"
   BOOTSTRAP_SASS = "3.3.4.1"
+  BYEBUG = "4.0.5"
   COFFEE_RAILS = "4.1.0"
   DEVISE = "3.4.1"
   FIGARO = "1.1.0"
@@ -19,11 +20,11 @@ module GemfileBuilder
   REDCARPET = "3.2.3"
   SASS_RAILS = "5.0.3"
   SQLITE3 = "1.3.10"
+  SPRING = "1.3.4"
   TURBOLINKS = "2.5.3"
   UGLIFIER = "2.7.1"
-  BYEBUG = "4.0.5"
   WEB_CONSOLE = "2.1.2"
-  SPRING = "1.3.4"
+  
 
   def self.build_gemfile(app_dir, options)
     new_line(2)
