@@ -83,6 +83,9 @@ class AppGenerator
     # save config
     ConfigHelpers.create_config(@app_dir, @options)
 
+    # annotate models and routes
+    annotate
+
     # git
     set_git
 
@@ -277,6 +280,17 @@ class AppGenerator
     end
     new_line
     wputs "----> Gems installed in 'vendor/bundle/'.", :info
+  end
+
+  def annotate
+    new_line(2)
+    wputs "----> Annotating models and routes ...", :info
+    Dir.chdir "#{@app_dir}" do
+      system "bundle exec annotate"
+      system "bundle exec annotate --routes"
+    end
+    new_line
+    wputs "----> Models and routes annotated.", :info
   end
 
   def create_database
