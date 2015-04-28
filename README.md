@@ -2,6 +2,11 @@
 
 _Create **Rails** apps. **Faster**._
 
+
+## Looking for sponsors!
+
+As I'm planning the next major version, RailsBricks 4, I'm looking for sponsors. [Let me know](http://railsbricks.net/contact) if you'd be interested!
+
 ---
 - Title: RailsBricks
 - Version: 3.2.0
