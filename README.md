@@ -5,7 +5,7 @@ _Create **Rails** apps. **Faster**._
 
 ## Looking for sponsors!
 
-As I'm planning the next major version, RailsBricks 4, I'm looking for sponsors. [Let me know](http://railsbricks.net/contact) if you'd be interested!
+**As I'm planning the next major version, RailsBricks 4, I'm looking for sponsors. [Read more about it here...](http://railsbricks.net/news/the-next-version-of-railsbricks-needs-sponsors)**
 
 ---
 - Title: RailsBricks
