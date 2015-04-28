@@ -13,6 +13,8 @@ class Railsbricks
       new_app
     elsif args[0] == '-r' || args[0] == '--recreate-db'
       recreate_db
+    elsif args[0] == '-a' || args[0] == '--annotate'
+      annotate
     elsif args[0] == '--robocop'
       prime_directives
     elsif args[0] == '-v' || args[0] == '--version'
@@ -41,6 +43,17 @@ class Railsbricks
     system "#{options["rake_command"]} db:seed"
     puts
     StringHelpers.wputs "----> Database recreated.", :info
+    puts
+  end
+
+  def self.annotate
+    puts 
+    StringHelpers.wputs "----> Annotating models and routes ...", :info
+    puts
+    system "bundle exec annotate"
+    system "bundle exec annotate --routes"
+    puts
+    StringHelpers.wputs "----> Models and routes annotated.", :info
     puts
   end
 
