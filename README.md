@@ -2,9 +2,14 @@
 
 _Create **Rails** apps. **Faster**._
 
+## Important: Please read
+
+**I started working on the next version of RailsBricks. In order to bring my idea to life, I need a bit of your help and started a crowdfunding campaign on Indiegogo at [http://igg.me/at/railsbricks](http://igg.me/at/railsbricks). Please visit the campaign page and share it as you can. Details on the next version are within the campaign description. Thanks!**
+
+
 ---
 - Title: RailsBricks
-- Version: 3.2.1
+- Version: 3.2.2
 - Author: Nico Schuele (www.nicoschuele.com)
 - Contact: [contact page](http://railsbricks.net/contact)
 - Homepage: http://www.railsbricks.net

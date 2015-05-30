@@ -100,6 +100,11 @@ class AppGenerator
     new_line
     wputs "Run 'rails server' within #{@options[:app_name]} to start it.", :help
     new_line
+    wputs "************************************************************", :error
+    wputs "Your help is needed to build the next version of RailsBricks", :error
+    wputs "         please visit http://igg.me/at/railsbricks", :error
+    wputs "************************************************************", :error
+    new_line
 
   end
 
