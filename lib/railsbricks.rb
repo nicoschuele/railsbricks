@@ -70,7 +70,6 @@ class Railsbricks
     StringHelpers.wputs "www.railsbricks.net", :info
     StringHelpers.wputs "source: https://github.com/nicoschuele/railsbricks", :help
     StringHelpers.wputs "by Nico Schuele (www.nicoschuele.com)", :help
-    StringHelpers.wputs "Please visit http://igg.me/at/railsbricks", :help
     puts
   end
 
