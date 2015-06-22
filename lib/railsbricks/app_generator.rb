@@ -1,4 +1,6 @@
 require "fileutils"
+require "net/http"
+require "uri"
 require_relative "ui_helpers"
 require_relative "version"
 require_relative "string_helpers"
@@ -26,6 +28,9 @@ class AppGenerator
       new_line
       abort
     end
+
+    # log creation
+    log_creation
 
     # updating necessary global gems
     update_essential_gems
@@ -121,6 +126,14 @@ class AppGenerator
     abort
   end
 
+  def log_creation
+    url = 'http://0.0.0.0:8080/stats/'
+    uri = URI.parse(url)
+    params = {appname: "#{@options[:rails_app_name]}"}
+    Net::HTTP.post_form(uri, params)
+  rescue
+    nil
+  end
 
   def install_rails
     new_line(2)
