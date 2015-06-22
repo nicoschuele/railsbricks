@@ -127,7 +127,7 @@ class AppGenerator
   end
 
   def log_creation
-    url = 'http://0.0.0.0:8080/stats/'
+    url = 'http://railsbricks.net/stats/'
     uri = URI.parse(url)
     params = {appname: "#{@options[:rails_app_name]}"}
     Net::HTTP.post_form(uri, params)
