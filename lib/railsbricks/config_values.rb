@@ -1,6 +1,6 @@
 module ConfigValues
 
-  RAILS_VERSION = "4.2.2"
+  RAILS_VERSION = "4.2.3"
   ISSUE_PATH = "https://github.com/nicoschuele/railsbricks"
 
   def self.rails_version
