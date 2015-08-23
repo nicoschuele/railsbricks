@@ -59,16 +59,16 @@ class Menu
     new_line
     wputs "- Which version of Ruby do you want to use?"
     wputs "1. 2.0.0", :info
-    wputs "2. 2.2.1", :info
-    wputs "3. 2.2.2 (default)", :info
+    wputs "2. 2.2.2", :info
+    wputs "3. 2.2.3 (default)", :info
     choice = answer("Your choice (1-3):")
     case choice
     when "1"
       @options[:ruby_version] = "2.0.0"
     when "2"
-      @options[:ruby_version] = "2.2.1"
-    else
       @options[:ruby_version] = "2.2.2"
+    else
+      @options[:ruby_version] = "2.2.3"
     end
     new_line(2)
 

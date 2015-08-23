@@ -9,13 +9,13 @@ module GemfileBuilder
   ANNOTATE = "2.6.10"
   BCRYPT = "3.1.10"
   BOOTSTRAP_SASS = "3.3.5.1"
-  BYEBUG = "5.0.0"
+  BYEBUG = "6.0.2"
   COFFEE_RAILS = "4.1.0"
-  DEVISE = "3.5.1"
+  DEVISE = "3.5.2"
   FIGARO = "1.1.1"
-  FONT_AWESOME_SASS = "4.3.2.1"
+  FONT_AWESOME_SASS = "4.4.0"
   FRIENDLY_ID = "5.1.0"
-  JBUILDER = "2.3.0"
+  JBUILDER = "2.3.1"
   JQUERY_RAILS = "4.0.4"
   KAMINARI = "0.16.3"
   REDCARPET = "3.3.2"
@@ -24,7 +24,7 @@ module GemfileBuilder
   SPRING = "1.3.6"
   TURBOLINKS = "2.5.3"
   UGLIFIER = "2.7.1"
-  WEB_CONSOLE = "2.1.3"
+  WEB_CONSOLE = "2.2.1"
 
 
   def self.build_gemfile(app_dir, options)
