@@ -1,12 +1,12 @@
 module Version
 
   MAJOR = 3
-  MINOR = 2
-  PATCH = 8
+  MINOR = 3
+  PATCH = 0
   PRE = nil
 
   YEAR = "2015"
-  MONTH = "08"
+  MONTH = "09"
   DAY = "25"
 
   def self.to_s
