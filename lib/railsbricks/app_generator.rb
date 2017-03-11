@@ -111,15 +111,13 @@ class AppGenerator
 
   def update_essential_gems
     new_line
-    wputs "----> Updating Rake & Bundler ... ", :info
-    system "#{@options[:gem_command]} install rake --no-rdoc --no-ri"
-    system "#{@options[:gem_command]} update rake"
+    wputs "----> Bundler ... ", :info
     system "#{@options[:gem_command]} install bundler --no-rdoc --no-ri"
     system "#{@options[:gem_command]} update bundler"
     new_line
-    wputs "----> Rake & Bundler updated to their latest versions.", :info
+    wputs "----> Bundler updated to their latest versions.", :info
   rescue
-    Errors.display_error("Required gems (rake & bundler) couldn't be updated properly. Stopping app creation.", true)
+    Errors.display_error("Required gem (bundler) couldn't be updated properly. Stopping app creation.", true)
     abort
   end
 
