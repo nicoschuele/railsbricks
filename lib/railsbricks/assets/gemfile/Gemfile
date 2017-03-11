@@ -3,39 +3,39 @@ ruby 'BRICK_RUBY_VERSION'
 
 # Standard Rails gems
 gem 'rails', 'BRICK_RAILS_VERSION'
-gem 'sass-rails', 'BRICK_SASS_RAILS_VERSION'
-gem 'uglifier', 'BRICK_UGLIFIER_VERSION'
-gem 'coffee-rails', 'BRICK_COFFEE_RAILS_VERSION'
-gem 'jquery-rails', 'BRICK_JQUERY_RAILS_VERSION'
-gem 'turbolinks', 'BRICK_TURBOLINKS_VERSION'
-gem 'jbuilder', 'BRICK_JBUILDER_VERSION'
-gem 'bcrypt', 'BRICK_BCRYPT_VERSION'
+gem 'sass-rails' #, 'BRICK_SASS_RAILS_VERSION'
+gem 'uglifier' #, 'BRICK_UGLIFIER_VERSION'
+gem 'coffee-rails' #, 'BRICK_COFFEE_RAILS_VERSION'
+gem 'jquery-rails' #, 'BRICK_JQUERY_RAILS_VERSION'
+gem 'turbolinks' #, 'BRICK_TURBOLINKS_VERSION'
+gem 'jbuilder' #, 'BRICK_JBUILDER_VERSION'
+gem 'bcrypt' #, 'BRICK_BCRYPT_VERSION'
 
 # Necessary for Windows OS (won't install on *nix systems)
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'tzinfo-data' #, platforms: [:mingw, :mswin]
 
 # Kaminari: https://github.com/amatsuda/kaminari
-gem 'kaminari', 'BRICK_KAMINARI_VERSION'
+gem 'kaminari' #, 'BRICK_KAMINARI_VERSION'
 
 # Friendly_id: https://github.com/norman/friendly_id
-gem 'friendly_id', 'BRICK_FRIENDLY_ID_VERSION'
+gem 'friendly_id' #, 'BRICK_FRIENDLY_ID_VERSION'
 
 # Font-awesome: https://github.com/FortAwesome/font-awesome-sass
-gem 'font-awesome-sass', 'BRICK_FONT_AWESOME_SASS_VERSION'
+gem 'font-awesome-sass' #, 'BRICK_FONT_AWESOME_SASS_VERSION'
 
 # Bootstrap 3: https://github.com/twbs/bootstrap-sass
-gem 'bootstrap-sass', 'BRICK_BOOTSTRAP_SASS_VERSION'
+gem 'bootstrap-sass' #, 'BRICK_BOOTSTRAP_SASS_VERSION'
 
 group :development, :test do
-  gem 'byebug', 'BRICK_BYEBUG_VERSION'
-  gem 'web-console', 'BRICK_WEB_CONSOLE_VERSION'
+  gem 'byebug' #, 'BRICK_BYEBUG_VERSION'
+  gem 'web-console' #, 'BRICK_WEB_CONSOLE_VERSION'
 
   # Figaro: https://github.com/laserlemon/figaro
-  gem 'figaro', 'BRICK_FIGARO_VERSION'
+  gem 'figaro' #, 'BRICK_FIGARO_VERSION'
 
   # Spring: https://github.com/rails/spring
-  gem 'spring', 'BRICK_SPRING_VERSION'
+  gem 'spring' #, 'BRICK_SPRING_VERSION'
 
   # Annotate_Models: https://github.com/ctran/annotate_models
-  gem 'annotate', 'BRICK_ANNOTATE_VERSION'
+  gem 'annotate' #, 'BRICK_ANNOTATE_VERSION'
 end
