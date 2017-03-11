@@ -16,7 +16,7 @@ _Create **Rails** apps. **Faster**._
 
 ## Not Maintained Anymore!
 
-**Please note that RailsBricks is currently not maintained. I leave it here for legacy purpose. If you want to take over, [contact me](https://twitter.com/nicoschuele).**
+**Please note that RailsBricks is currently not maintained and will likely not be upgraded to use Rails 5+. I leave it here for legacy purpose. If you want to take over, [contact me](https://twitter.com/nicoschuele).**
 
 
 ## Features
@@ -58,6 +58,8 @@ Like any other gem, you simply issue `gem install railsbricks`
 ## Usage
 
 To create a new app, just type `rbricks --new` and follow the wizard.
+
+There's a great RailsBricks tutorial available on SitePoint if you want to know more: [sitepoint.com/railsbricks-start-faster-rails](https://www.sitepoint.com/railsbricks-start-faster-rails/).
 
 ## Contribute
 
