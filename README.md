@@ -2,6 +2,8 @@
 
 _Create **Rails** apps. **Faster**._
 
+**[Watch the video!](https://vimeo.com/110340717)**
+
 ---
 - Title: RailsBricks
 - Version: 3.7.0
@@ -10,9 +12,6 @@ _Create **Rails** apps. **Faster**._
 - Twitter: @nicoschuele
 
 ---
-
-<iframe src="https://player.vimeo.com/video/110340717" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/110340717">RailsBricks 3</a> from <a href="https://vimeo.com/nicoschuele">nicoschuele</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 ## Not Maintained Anymore!
 
