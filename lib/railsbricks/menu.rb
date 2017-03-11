@@ -83,15 +83,7 @@ class Menu
     new_line(2)
 
     # rake command
-    if hints
-      wputs "Do you usually run rake tasks by prefixing them with 'bundle exec'? I also need to know that.", :help
-    end
-    new_line
-    wputs "- How do you usually run rake tasks?"
-    wputs "1. rake some_task (default)", :info
-    wputs "2. bundle exec rake some_task", :info
-    @options[:rake_command] = answer() == "2" ? "bundle exec rake" : "rake"
-    new_line(2)
+    @options[:rake_command] = "bundle exec rake"
 
     # development database
     if hints
