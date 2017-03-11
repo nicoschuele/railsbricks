@@ -4,14 +4,20 @@ _Create **Rails** apps. **Faster**._
 
 ---
 - Title: RailsBricks
-- Version: 3.5.0
+- Version: 3.7.0
 - Author: Nico Schuele (www.nicoschuele.com)
-- Contact: [contact page](http://railsbricks.net/contact)
-- Homepage: http://www.railsbricks.net
 - Github: https://github.com/nicoschuele/railsbricks
-- Twitter: @railsbricks
+- Twitter: @nicoschuele
 
 ---
+
+<iframe src="https://player.vimeo.com/video/110340717" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/110340717">RailsBricks 3</a> from <a href="https://vimeo.com/nicoschuele">nicoschuele</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+## Not Maintained Anymore!
+
+**Please note that RailsBricks is currently not maintained. I leave it here for legacy purpose. If you want to take over, [contact me](https://twitter.com/nicoschuele).**
+
 
 ## Features
 
@@ -35,7 +41,7 @@ In order to use RailsBricks, you need the following:
 
 ## What about Windows?
 
-**RailsBricks doesn't run out of the box on Windows**. Read the [Windows Installation Guide](http://railsbricks.net/windows) to know what to do. You will first need to install the [DevKit](http://rubyinstaller.org/downloads/) as well as the [tzinfo-data](https://github.com/tzinfo/tzinfo-data) gem.
+**RailsBricks doesn't run out of the box on Windows**. You will first need to install the [DevKit](http://rubyinstaller.org/downloads/) as well as the [tzinfo-data](https://github.com/tzinfo/tzinfo-data) gem.
 
 ## Ruby support
 
@@ -53,20 +59,10 @@ Like any other gem, you simply issue `gem install railsbricks`
 
 To create a new app, just type `rbricks --new` and follow the wizard.
 
-You can read the documentation, see a video and go through the *Get Started* tutorial at [railsbricks.net](http://www.railsbricks.net)
-
 ## Contribute
 
-You like RailsBricks and want to contribute to its development? Cool! You can do it in 2 ways:
+RailsBricks is currently not maintained and not accepting pull requests anymore. If you want to take over, [contact me](https://twitter.com/nicoschuele).
 
-* Fork the code and implement an awesome feature
-* Found a bug or a quirk? Fix it!
-
-**Important**: before working on a new feature, [contact me](http://railsbricks.net/contact) or [open an issue](https://github.com/nicoschuele/railsbricks/issues) on Github explaining what you'd like to implement. I'm trying to keep the maintenance of RailsBricks as easy and fast as possible so before accepting a feature or a PR, we need to make sure it will be maintained properly and within an appropriate timeframe.
-
-## Questions, Feedback
-
-If you have any question or feedback, [drop me a line](http://railsbricks.net/contact) or tweet at @railsbricks
 
 ## Acknowledgements
 
@@ -82,4 +78,4 @@ If you have any question or feedback, [drop me a line](http://railsbricks.net/co
 
 ## License
 
-Released under GNU GPL-3. Copyright (c) 2014-2015 Nico Schuele. See LICENSE.txt for further details.
+Released under GNU GPL-3. Copyright (c) 2014-2017 Nico Schuele. See LICENSE.txt for further details.

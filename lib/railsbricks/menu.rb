@@ -19,7 +19,6 @@ class Menu
     wputs '*****************************'
     wputs "*                           *"
     wputs "*     RailsBricks #{Version.to_s}     *"
-    wputs '*    www.railsbricks.net    *'
     wputs "*                           *"
     wputs "*     using Rails #{@options[:rails_version]}     *"
     wputs "*                           *"

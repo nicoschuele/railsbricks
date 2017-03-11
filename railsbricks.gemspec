@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.authors     = ["Nico Schuele"]
   s.email       = 'nicoschuele@gmail.com'
   s.files       = `git ls-files`.split($/)
-  s.homepage    = 'http://www.railsbricks.net'
+  s.homepage    = 'https://github.com/nicoschuele/railsbricks'
   s.license     = 'GPL-3.0'
 end

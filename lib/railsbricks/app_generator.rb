@@ -29,9 +29,6 @@ class AppGenerator
       abort
     end
 
-    # log creation
-    log_creation
-
     # updating necessary global gems
     update_essential_gems
 
@@ -124,15 +121,6 @@ class AppGenerator
   rescue
     Errors.display_error("Required gems (rake & bundler) couldn't be updated properly. Stopping app creation.", true)
     abort
-  end
-
-  def log_creation
-    url = 'http://railsbricks.net/stats/'
-    uri = URI.parse(url)
-    params = {appname: "#{@options[:rails_app_name]}"}
-    Net::HTTP.post_form(uri, params)
-  rescue
-    nil
   end
 
   def install_rails
